@@ -1,0 +1,10 @@
+NOTES: These files are dependent for my scripts to use (some of them anyway) and these files are to be placed in the main game directory with the exe.
+
+My scripts, particulary the ones that print out data via a .txt file write files to the game directory.
+
+
+END NOTES:
+Short File Descriptions
+
+- strings.txt
+This file is important as it contains all of the strings/names parsed from the game .exe itself as well as from all of the scripts that exist in the game. These names are primarily used for modifying/editing properties.
