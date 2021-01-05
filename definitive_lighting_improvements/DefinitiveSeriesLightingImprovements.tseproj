@@ -1,0 +1,12 @@
+{
+  "formatVersion": "1",
+  "tool": {
+    "game": "Definitive Series Lighting Improvements"
+  },
+  "mod": {
+    "name": "Definitive Series Lighting Improvements",
+    "version": "1.0",
+    "author": "changemymindpls1",
+    "priority": 1100
+  }
+}
