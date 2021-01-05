@@ -8,6 +8,8 @@
 
 This is my personal project using the [Telltale Script Editor](https://github.com/Telltale-Modding-Group/Telltale-Script-Editor) that I primarily use to test and write new mods or experiment with the Telltale Tool. This is not an offical mod that will be released but more or less this is just testing grounds for me, hence the name "PlaygroundProject". It contains my primary scripts and functions that I use to create and playtest ideas and experiment with the scenes and assets in-game to gather more information in learning how Telltale Games work and function. You are free and welcome to download/copy/use these scripts in your own project!
 
+In setting or using this project, it's also worth noting I use this project in conjunction with [droyti's Load Any Level](https://github.com/droyti/LoadAnyLevel). A super useful mod for loading any level in the game, and it also has features that make it easy and fast to iterate.
+
 ## Editing/Modifying
 
 ***For Modders/Developers Only***
