@@ -50,6 +50,7 @@ DrugStoreInterior = function(sceneObj)
     local envlight_shadowtype = 2
     local envlight_shadowquality = 2
     local envlight_hbaoParticipation = 1 --0 being ambient, 1 being direct
+    local envlight_materIntensity = 0.45
     local envlight_prop = "module_env_light.prop"
     --local envlight_prop = "module_env_lightgroup.prop"
     --local envlight_prop = "module_light.prop"
@@ -61,7 +62,7 @@ DrugStoreInterior = function(sceneObj)
     
     local light1 = AgentCreate("light_lamp", envlight_prop, Vector(0.207692,1.522960,-1.390468), Vector(90,0,0), sceneObj, false, false)
     Custom_AgentSetProperty("light_lamp", "EnvLight - Type", 1, sceneObj)
-    Custom_AgentSetProperty("light_lamp", "EnvLight - Intensity", 1, sceneObj)
+    Custom_AgentSetProperty("light_lamp", "EnvLight - Intensity", 1 + envlight_materIntensity, sceneObj)
     Custom_AgentSetProperty("light_lamp", "EnvLight - Radius", 5, sceneObj)
     Custom_AgentSetProperty("light_lamp", "EnvLight - Distance Falloff", 4, sceneObj)
     Custom_AgentSetProperty("light_lamp", "EnvLight - Spot Angle Inner", 5, sceneObj)
@@ -75,7 +76,7 @@ DrugStoreInterior = function(sceneObj)
     
     local light2 = AgentCreate("light_lamp01", envlight_prop, Vector(0.316396,1.283947,-1.390468), Vector(90,0,0), sceneObj, false, false)
     Custom_AgentSetProperty("light_lamp01", "EnvLight - Type", 1, sceneObj)
-    Custom_AgentSetProperty("light_lamp01", "EnvLight - Intensity", 1, sceneObj)
+    Custom_AgentSetProperty("light_lamp01", "EnvLight - Intensity", 1 + envlight_materIntensity, sceneObj)
     Custom_AgentSetProperty("light_lamp01", "EnvLight - Radius", 3.6, sceneObj)
     Custom_AgentSetProperty("light_lamp01", "EnvLight - Distance Falloff", 4.35, sceneObj)
     Custom_AgentSetProperty("light_lamp01", "EnvLight - Spot Angle Inner", 5, sceneObj)
@@ -89,7 +90,7 @@ DrugStoreInterior = function(sceneObj)
     
     local light3 = AgentCreate("light_juicemachine", envlight_prop, Vector(-5.824718,2.316584,5.093388), Vector(169.451767,0,0), sceneObj, false, false)
     Custom_AgentSetProperty("light_juicemachine", "EnvLight - Type", 1, sceneObj)
-    Custom_AgentSetProperty("light_juicemachine", "EnvLight - Intensity", 1, sceneObj)
+    Custom_AgentSetProperty("light_juicemachine", "EnvLight - Intensity", 1 + envlight_materIntensity, sceneObj)
     Custom_AgentSetProperty("light_juicemachine", "EnvLight - Radius", 5, sceneObj)
     Custom_AgentSetProperty("light_juicemachine", "EnvLight - Distance Falloff", 2, sceneObj)
     Custom_AgentSetProperty("light_juicemachine", "EnvLight - Spot Angle Inner", 34, sceneObj)
@@ -103,7 +104,7 @@ DrugStoreInterior = function(sceneObj)
     
     local light4 = AgentCreate("light_juicemachine01", envlight_prop, Vector(-4.360179,2.316584,5.093388), Vector(169.451767,0,0), sceneObj, false, false)
     Custom_AgentSetProperty("light_juicemachine01", "EnvLight - Type", 1, sceneObj)
-    Custom_AgentSetProperty("light_juicemachine01", "EnvLight - Intensity", 1, sceneObj)
+    Custom_AgentSetProperty("light_juicemachine01", "EnvLight - Intensity", 1 + envlight_materIntensity, sceneObj)
     Custom_AgentSetProperty("light_juicemachine01", "EnvLight - Radius", 5, sceneObj)
     Custom_AgentSetProperty("light_juicemachine01", "EnvLight - Distance Falloff", 2, sceneObj)
     Custom_AgentSetProperty("light_juicemachine01", "EnvLight - Spot Angle Inner", 34, sceneObj)
@@ -117,7 +118,7 @@ DrugStoreInterior = function(sceneObj)
     
     local light5 = AgentCreate("light_juicemachine02", envlight_prop, Vector(-2.822215,2.316584,5.093388), Vector(163.456879,23.977518,-4.327414), sceneObj, false, false)
     Custom_AgentSetProperty("light_juicemachine02", "EnvLight - Type", 1, sceneObj)
-    Custom_AgentSetProperty("light_juicemachine02", "EnvLight - Intensity", 1, sceneObj)
+    Custom_AgentSetProperty("light_juicemachine02", "EnvLight - Intensity", 1 + envlight_materIntensity, sceneObj)
     Custom_AgentSetProperty("light_juicemachine02", "EnvLight - Radius", 5.3000001907349, sceneObj)
     Custom_AgentSetProperty("light_juicemachine02", "EnvLight - Distance Falloff", 2, sceneObj)
     Custom_AgentSetProperty("light_juicemachine02", "EnvLight - Spot Angle Inner", 92, sceneObj)
@@ -131,7 +132,7 @@ DrugStoreInterior = function(sceneObj)
     
     local light6 = AgentCreate("light_juicemachine03", envlight_prop, Vector(-3.613292,2.316584,5.093388), Vector(169.451767,0.000000,0.000000), sceneObj, false, false)
     Custom_AgentSetProperty("light_juicemachine03", "EnvLight - Type", 1, sceneObj)
-    Custom_AgentSetProperty("light_juicemachine03", "EnvLight - Intensity", 1, sceneObj)
+    Custom_AgentSetProperty("light_juicemachine03", "EnvLight - Intensity", 1 + envlight_materIntensity, sceneObj)
     Custom_AgentSetProperty("light_juicemachine03", "EnvLight - Radius", 5, sceneObj)
     Custom_AgentSetProperty("light_juicemachine03", "EnvLight - Distance Falloff", 2, sceneObj)
     Custom_AgentSetProperty("light_juicemachine03", "EnvLight - Spot Angle Inner", 5, sceneObj)
@@ -145,7 +146,7 @@ DrugStoreInterior = function(sceneObj)
     
     local light7 = AgentCreate("light_juicemachine04", envlight_prop, Vector(-5.115184,2.316584,5.093388), Vector(169.451767,0.000000,0.000000), sceneObj, false, false)
     Custom_AgentSetProperty("light_juicemachine04", "EnvLight - Type", 1, sceneObj)
-    Custom_AgentSetProperty("light_juicemachine04", "EnvLight - Intensity", 1, sceneObj)
+    Custom_AgentSetProperty("light_juicemachine04", "EnvLight - Intensity", 1 + envlight_materIntensity, sceneObj)
     Custom_AgentSetProperty("light_juicemachine04", "EnvLight - Radius", 5, sceneObj)
     Custom_AgentSetProperty("light_juicemachine04", "EnvLight - Distance Falloff", 2, sceneObj)
     Custom_AgentSetProperty("light_juicemachine04", "EnvLight - Spot Angle Inner", 5, sceneObj)
@@ -159,7 +160,7 @@ DrugStoreInterior = function(sceneObj)
     
     local light8 = AgentCreate("light_juicemachine05", envlight_prop, Vector(-5.510325,2.329066,5.159794), Vector(49.313824,0.000000,0.000000), sceneObj, false, false)
     Custom_AgentSetProperty("light_juicemachine05", "EnvLight - Type", 1, sceneObj)
-    Custom_AgentSetProperty("light_juicemachine05", "EnvLight - Intensity", 1, sceneObj)
+    Custom_AgentSetProperty("light_juicemachine05", "EnvLight - Intensity", 1 + envlight_materIntensity, sceneObj)
     Custom_AgentSetProperty("light_juicemachine05", "EnvLight - Radius", 5, sceneObj)
     Custom_AgentSetProperty("light_juicemachine05", "EnvLight - Distance Falloff", 8, sceneObj)
     Custom_AgentSetProperty("light_juicemachine05", "EnvLight - Spot Angle Inner", 5, sceneObj)
@@ -173,7 +174,7 @@ DrugStoreInterior = function(sceneObj)
     
     local light9 = AgentCreate("light_juicemachine06", envlight_prop, Vector(-3.217357,2.329066,5.159794), Vector(49.313824,0.000000,0.000000), sceneObj, false, false)
     Custom_AgentSetProperty("light_juicemachine06", "EnvLight - Type", 1, sceneObj)
-    Custom_AgentSetProperty("light_juicemachine06", "EnvLight - Intensity", 2.4, sceneObj)
+    Custom_AgentSetProperty("light_juicemachine06", "EnvLight - Intensity", 2.4 + envlight_materIntensity, sceneObj)
     Custom_AgentSetProperty("light_juicemachine06", "EnvLight - Radius", 5, sceneObj)
     Custom_AgentSetProperty("light_juicemachine06", "EnvLight - Distance Falloff", 8, sceneObj)
     Custom_AgentSetProperty("light_juicemachine06", "EnvLight - Spot Angle Inner", 62.950000762939, sceneObj)
@@ -187,7 +188,7 @@ DrugStoreInterior = function(sceneObj)
     
     local light10 = AgentCreate("light_juicemachine07", envlight_prop, Vector(-4.008433,2.329066,5.159794), Vector(49.313824,0.000000,0.000000), sceneObj, false, false)
     Custom_AgentSetProperty("light_juicemachine07", "EnvLight - Type", 1, sceneObj)
-    Custom_AgentSetProperty("light_juicemachine07", "EnvLight - Intensity", 1, sceneObj)
+    Custom_AgentSetProperty("light_juicemachine07", "EnvLight - Intensity", 1 + envlight_materIntensity, sceneObj)
     Custom_AgentSetProperty("light_juicemachine07", "EnvLight - Radius", 5, sceneObj)
     Custom_AgentSetProperty("light_juicemachine07", "EnvLight - Distance Falloff", 8, sceneObj)
     Custom_AgentSetProperty("light_juicemachine07", "EnvLight - Spot Angle Inner", 5, sceneObj)
@@ -201,7 +202,7 @@ DrugStoreInterior = function(sceneObj)
     
     local light11 = AgentCreate("light_juicemachine08", envlight_prop, Vector(-4.755321,2.329066,5.159794), Vector(49.313824,0.000000,0.000000), sceneObj, false, false)
     Custom_AgentSetProperty("light_juicemachine08", "EnvLight - Type", 1, sceneObj)
-    Custom_AgentSetProperty("light_juicemachine08", "EnvLight - Intensity", 1, sceneObj)
+    Custom_AgentSetProperty("light_juicemachine08", "EnvLight - Intensity", 1 + envlight_materIntensity, sceneObj)
     Custom_AgentSetProperty("light_juicemachine08", "EnvLight - Radius", 5, sceneObj)
     Custom_AgentSetProperty("light_juicemachine08", "EnvLight - Distance Falloff", 8, sceneObj)
     Custom_AgentSetProperty("light_juicemachine08", "EnvLight - Spot Angle Inner", 5, sceneObj)
@@ -215,7 +216,7 @@ DrugStoreInterior = function(sceneObj)
     
     local light12 = AgentCreate("light_juicemachine09", envlight_prop, Vector(-5.135570,2.329066,5.159794), Vector(49.313824,0.000000,0.000000), sceneObj, false, false)
     Custom_AgentSetProperty("light_juicemachine09", "EnvLight - Type", 1, sceneObj)
-    Custom_AgentSetProperty("light_juicemachine09", "EnvLight - Intensity", 1, sceneObj)
+    Custom_AgentSetProperty("light_juicemachine09", "EnvLight - Intensity", 1 + envlight_materIntensity, sceneObj)
     Custom_AgentSetProperty("light_juicemachine09", "EnvLight - Radius", 5, sceneObj)
     Custom_AgentSetProperty("light_juicemachine09", "EnvLight - Distance Falloff", 8, sceneObj)
     Custom_AgentSetProperty("light_juicemachine09", "EnvLight - Spot Angle Inner", 5, sceneObj)
@@ -229,7 +230,7 @@ DrugStoreInterior = function(sceneObj)
     
     local light13 = AgentCreate("light_juicemachine10", envlight_prop, Vector(-5.890574,2.329066,5.159794), Vector(49.313824,0.000000,0.000000), sceneObj, false, false)
     Custom_AgentSetProperty("light_juicemachine10", "EnvLight - Type", 1, sceneObj)
-    Custom_AgentSetProperty("light_juicemachine10", "EnvLight - Intensity", 2.4, sceneObj)
+    Custom_AgentSetProperty("light_juicemachine10", "EnvLight - Intensity", 2.4 + envlight_materIntensity, sceneObj)
     Custom_AgentSetProperty("light_juicemachine10", "EnvLight - Radius", 5, sceneObj)
     Custom_AgentSetProperty("light_juicemachine10", "EnvLight - Distance Falloff", 8, sceneObj)
     Custom_AgentSetProperty("light_juicemachine10", "EnvLight - Spot Angle Inner", 62.950000762939, sceneObj)
@@ -243,7 +244,7 @@ DrugStoreInterior = function(sceneObj)
     
     local light14 = AgentCreate("light_juicemachine11", envlight_prop, Vector(-4.388682,2.329066,5.159794), Vector(49.313824,0.000000,0.000000), sceneObj, false, false)
     Custom_AgentSetProperty("light_juicemachine11", "EnvLight - Type", 1, sceneObj)
-    Custom_AgentSetProperty("light_juicemachine11", "EnvLight - Intensity", 2.4, sceneObj)
+    Custom_AgentSetProperty("light_juicemachine11", "EnvLight - Intensity", 2.4 + envlight_materIntensity, sceneObj)
     Custom_AgentSetProperty("light_juicemachine11", "EnvLight - Radius", 5, sceneObj)
     Custom_AgentSetProperty("light_juicemachine11", "EnvLight - Distance Falloff", 8, sceneObj)
     Custom_AgentSetProperty("light_juicemachine11", "EnvLight - Spot Angle Inner", 62.950000762939, sceneObj)
@@ -257,7 +258,7 @@ DrugStoreInterior = function(sceneObj)
     
     local light15 = AgentCreate("light_juicemachine12", envlight_prop, Vector(-3.597606,2.329066,5.159794), Vector(49.313824,0.000000,0.000000), sceneObj, false, false)
     Custom_AgentSetProperty("light_juicemachine12", "EnvLight - Type", 1, sceneObj)
-    Custom_AgentSetProperty("light_juicemachine12", "EnvLight - Intensity", 1, sceneObj)
+    Custom_AgentSetProperty("light_juicemachine12", "EnvLight - Intensity", 1 + envlight_materIntensity, sceneObj)
     Custom_AgentSetProperty("light_juicemachine12", "EnvLight - Radius", 5, sceneObj)
     Custom_AgentSetProperty("light_juicemachine12", "EnvLight - Distance Falloff", 8, sceneObj)
     Custom_AgentSetProperty("light_juicemachine12", "EnvLight - Spot Angle Inner", 5, sceneObj)
@@ -271,7 +272,7 @@ DrugStoreInterior = function(sceneObj)
     
     local light16 = AgentCreate("light_atm", envlight_prop, Vector(5.435517,1.403774,-2.659433), Vector(-178.534744,11.990791,0.311271), sceneObj, false, false)
     Custom_AgentSetProperty("light_atm", "EnvLight - Type", 1, sceneObj)
-    Custom_AgentSetProperty("light_atm", "EnvLight - Intensity", 3, sceneObj)
+    Custom_AgentSetProperty("light_atm", "EnvLight - Intensity", 3 + envlight_materIntensity, sceneObj)
     Custom_AgentSetProperty("light_atm", "EnvLight - Radius", 5, sceneObj)
     Custom_AgentSetProperty("light_atm", "EnvLight - Distance Falloff", 3.35, sceneObj)
     Custom_AgentSetProperty("light_atm", "EnvLight - Spot Angle Inner", 85, sceneObj)
@@ -285,7 +286,7 @@ DrugStoreInterior = function(sceneObj)
     
     local light17 = AgentCreate("light_exit_red", envlight_prop, Vector(-3.550529,2.711920,-2.646201), Vector(0.000000,0.000000,0.000000), sceneObj, false, false)
     Custom_AgentSetProperty("light_exit_red", "EnvLight - Type", 0, sceneObj)
-    Custom_AgentSetProperty("light_exit_red", "EnvLight - Intensity", 3, sceneObj)
+    Custom_AgentSetProperty("light_exit_red", "EnvLight - Intensity", 3 + envlight_materIntensity, sceneObj)
     Custom_AgentSetProperty("light_exit_red", "EnvLight - Radius", 8, sceneObj)
     Custom_AgentSetProperty("light_exit_red", "EnvLight - Distance Falloff", 1.8, sceneObj)
     Custom_AgentSetProperty("light_exit_red", "EnvLight - Spot Angle Inner", 5, sceneObj)
@@ -299,7 +300,7 @@ DrugStoreInterior = function(sceneObj)
     
     local light18 = AgentCreate("light_fridge", envlight_prop, Vector(0.502013,1.862627,5.112618), Vector(75.988579,0.000000,0.000000), sceneObj, false, false)
     Custom_AgentSetProperty("light_fridge", "EnvLight - Type", 1, sceneObj)
-    Custom_AgentSetProperty("light_fridge", "EnvLight - Intensity", 1.15, sceneObj)
+    Custom_AgentSetProperty("light_fridge", "EnvLight - Intensity", 1.15 + envlight_materIntensity, sceneObj)
     Custom_AgentSetProperty("light_fridge", "EnvLight - Radius", 2.5, sceneObj)
     Custom_AgentSetProperty("light_fridge", "EnvLight - Distance Falloff", 2, sceneObj)
     Custom_AgentSetProperty("light_fridge", "EnvLight - Spot Angle Inner", 5, sceneObj)
@@ -313,7 +314,7 @@ DrugStoreInterior = function(sceneObj)
     
     local light19 = AgentCreate("light_fridge01", envlight_prop, Vector(-0.132691,2.077664,5.051461), Vector(-179.999985,-0.000000,0.000000), sceneObj, false, false)
     Custom_AgentSetProperty("light_fridge01", "EnvLight - Type", 1, sceneObj)
-    Custom_AgentSetProperty("light_fridge01", "EnvLight - Intensity", 1, sceneObj)
+    Custom_AgentSetProperty("light_fridge01", "EnvLight - Intensity", 1 + envlight_materIntensity, sceneObj)
     Custom_AgentSetProperty("light_fridge01", "EnvLight - Radius", 5, sceneObj)
     Custom_AgentSetProperty("light_fridge01", "EnvLight - Distance Falloff", 4, sceneObj)
     Custom_AgentSetProperty("light_fridge01", "EnvLight - Spot Angle Inner", 5, sceneObj)
@@ -327,7 +328,7 @@ DrugStoreInterior = function(sceneObj)
     
     local light20 = AgentCreate("light_fridge02", envlight_prop, Vector(1.122131,2.077664,5.051461), Vector(-179.999985,-0.000000,0.000000), sceneObj, false, false)
     Custom_AgentSetProperty("light_fridge02", "EnvLight - Type", 1, sceneObj)
-    Custom_AgentSetProperty("light_fridge02", "EnvLight - Intensity", 1, sceneObj)
+    Custom_AgentSetProperty("light_fridge02", "EnvLight - Intensity", 1 + envlight_materIntensity, sceneObj)
     Custom_AgentSetProperty("light_fridge02", "EnvLight - Radius", 5, sceneObj)
     Custom_AgentSetProperty("light_fridge02", "EnvLight - Distance Falloff", 5, sceneObj)
     Custom_AgentSetProperty("light_fridge02", "EnvLight - Spot Angle Inner", 5, sceneObj)
@@ -341,7 +342,7 @@ DrugStoreInterior = function(sceneObj)
     
     local light21 = AgentCreate("light_fridge03", envlight_prop, Vector(0.461059,2.077664,5.051461), Vector(-179.999985,-0.000000,0.000000), sceneObj, false, false)
     Custom_AgentSetProperty("light_fridge03", "EnvLight - Type", 1, sceneObj)
-    Custom_AgentSetProperty("light_fridge03", "EnvLight - Intensity", 1, sceneObj)
+    Custom_AgentSetProperty("light_fridge03", "EnvLight - Intensity", 1 + envlight_materIntensity, sceneObj)
     Custom_AgentSetProperty("light_fridge03", "EnvLight - Radius", 5, sceneObj)
     Custom_AgentSetProperty("light_fridge03", "EnvLight - Distance Falloff", 8, sceneObj)
     Custom_AgentSetProperty("light_fridge03", "EnvLight - Spot Angle Inner", 5, sceneObj)
@@ -355,7 +356,7 @@ DrugStoreInterior = function(sceneObj)
     
     local light22 = AgentCreate("light_office", envlight_prop, Vector(7.222539,3.065466,4.209622), Vector(32.245842,-90.000000,0.000000), sceneObj, false, false)
     Custom_AgentSetProperty("light_office", "EnvLight - Type", 1, sceneObj)
-    Custom_AgentSetProperty("light_office", "EnvLight - Intensity", 4.35, sceneObj)
+    Custom_AgentSetProperty("light_office", "EnvLight - Intensity", 4.35 + envlight_materIntensity, sceneObj)
     Custom_AgentSetProperty("light_office", "EnvLight - Radius", 8.85, sceneObj)
     Custom_AgentSetProperty("light_office", "EnvLight - Distance Falloff", 1, sceneObj)
     Custom_AgentSetProperty("light_office", "EnvLight - Spot Angle Inner", 5, sceneObj)
@@ -369,7 +370,7 @@ DrugStoreInterior = function(sceneObj)
     
     local light23 = AgentCreate("light_office01", envlight_prop, Vector(7.024538,3.271215,1.280118), Vector(43.902493,-90.000000,0.000000), sceneObj, false, false)
     Custom_AgentSetProperty("light_office01", "EnvLight - Type", 1, sceneObj)
-    Custom_AgentSetProperty("light_office01", "EnvLight - Intensity", 1, sceneObj)
+    Custom_AgentSetProperty("light_office01", "EnvLight - Intensity", 1 + envlight_materIntensity, sceneObj)
     Custom_AgentSetProperty("light_office01", "EnvLight - Radius", 6.55, sceneObj)
     Custom_AgentSetProperty("light_office01", "EnvLight - Distance Falloff", 2, sceneObj)
     Custom_AgentSetProperty("light_office01", "EnvLight - Spot Angle Inner", 5, sceneObj)
@@ -383,7 +384,7 @@ DrugStoreInterior = function(sceneObj)
     
     local light24 = AgentCreate("light_office02", envlight_prop, Vector(6.301869,2.496740,-1.430942), Vector(43.902493,-90.000000,0.000000), sceneObj, false, false)
     Custom_AgentSetProperty("light_office02", "EnvLight - Type", 1, sceneObj)
-    Custom_AgentSetProperty("light_office02", "EnvLight - Intensity", 9.65, sceneObj)
+    Custom_AgentSetProperty("light_office02", "EnvLight - Intensity", 9.65 + envlight_materIntensity, sceneObj)
     Custom_AgentSetProperty("light_office02", "EnvLight - Radius", 5.45, sceneObj)
     Custom_AgentSetProperty("light_office02", "EnvLight - Distance Falloff", 2, sceneObj)
     Custom_AgentSetProperty("light_office02", "EnvLight - Spot Angle Inner", 42, sceneObj)
@@ -397,7 +398,7 @@ DrugStoreInterior = function(sceneObj)
     
     local light25 = AgentCreate("light_atm01", envlight_prop, Vector(5.208680,1.384592,-2.848701), Vector(-178.625153,-23.388239,-0.594734), sceneObj, false, false)
     Custom_AgentSetProperty("light_atm01", "EnvLight - Type", 1, sceneObj)
-    Custom_AgentSetProperty("light_atm01", "EnvLight - Intensity", 12.65, sceneObj)
+    Custom_AgentSetProperty("light_atm01", "EnvLight - Intensity", 12.65 + envlight_materIntensity, sceneObj)
     Custom_AgentSetProperty("light_atm01", "EnvLight - Radius", 2.9, sceneObj)
     Custom_AgentSetProperty("light_atm01", "EnvLight - Distance Falloff", 4.2, sceneObj)
     Custom_AgentSetProperty("light_atm01", "EnvLight - Spot Angle Inner", 5, sceneObj)
@@ -411,7 +412,7 @@ DrugStoreInterior = function(sceneObj)
     
     local light26 = AgentCreate("light_lamp02", envlight_prop, Vector(-0.935984,1.765518,-1.774921), Vector(177.826828,0.000000,0.000000), sceneObj, false, false)
     Custom_AgentSetProperty("light_lamp02", "EnvLight - Type", 1, sceneObj)
-    Custom_AgentSetProperty("light_lamp02", "EnvLight - Intensity", 0.35, sceneObj)
+    Custom_AgentSetProperty("light_lamp02", "EnvLight - Intensity", 0.35 + envlight_materIntensity, sceneObj)
     Custom_AgentSetProperty("light_lamp02", "EnvLight - Radius", 5.5, sceneObj)
     Custom_AgentSetProperty("light_lamp02", "EnvLight - Distance Falloff", 2, sceneObj)
     Custom_AgentSetProperty("light_lamp02", "EnvLight - Spot Angle Inner", 5, sceneObj)
@@ -425,7 +426,7 @@ DrugStoreInterior = function(sceneObj)
     
     local light27 = AgentCreate("light_lamp03", envlight_prop, Vector(0.012210,1.786901,-1.349436), Vector(177.891586,-14.018348,0.526648), sceneObj, false, false)
     Custom_AgentSetProperty("light_lamp03", "EnvLight - Type", 1, sceneObj)
-    Custom_AgentSetProperty("light_lamp03", "EnvLight - Intensity", 0.15, sceneObj)
+    Custom_AgentSetProperty("light_lamp03", "EnvLight - Intensity", 0.15 + envlight_materIntensity, sceneObj)
     Custom_AgentSetProperty("light_lamp03", "EnvLight - Radius", 6.85, sceneObj)
     Custom_AgentSetProperty("light_lamp03", "EnvLight - Distance Falloff", 2, sceneObj)
     Custom_AgentSetProperty("light_lamp03", "EnvLight - Spot Angle Inner", 5, sceneObj)
@@ -439,7 +440,7 @@ DrugStoreInterior = function(sceneObj)
     
     local light28 = AgentCreate("light_lamp04", envlight_prop, Vector(0.649085,1.513927,-1.568927), Vector(90.000000,0.000000,0.000000), sceneObj, false, false)
     Custom_AgentSetProperty("light_lamp04", "EnvLight - Type", 0, sceneObj)
-    Custom_AgentSetProperty("light_lamp04", "EnvLight - Intensity", 2.55, sceneObj)
+    Custom_AgentSetProperty("light_lamp04", "EnvLight - Intensity", 2.55 + envlight_materIntensity, sceneObj)
     Custom_AgentSetProperty("light_lamp04", "EnvLight - Radius", 0.75, sceneObj)
     Custom_AgentSetProperty("light_lamp04", "EnvLight - Distance Falloff", 2, sceneObj)
     Custom_AgentSetProperty("light_lamp04", "EnvLight - Spot Angle Inner", 5, sceneObj)
@@ -453,7 +454,7 @@ DrugStoreInterior = function(sceneObj)
     
     local light29 = AgentCreate("light_office05", envlight_prop, Vector(8.438405,1.559179,2.700533), Vector(43.902493,-90.000000,0.000000), sceneObj, false, false)
     Custom_AgentSetProperty("light_office05", "EnvLight - Type", 0, sceneObj)
-    Custom_AgentSetProperty("light_office05", "EnvLight - Intensity", 1.05, sceneObj)
+    Custom_AgentSetProperty("light_office05", "EnvLight - Intensity", 1.05 + envlight_materIntensity, sceneObj)
     Custom_AgentSetProperty("light_office05", "EnvLight - Radius", 4.65, sceneObj)
     Custom_AgentSetProperty("light_office05", "EnvLight - Distance Falloff", 2, sceneObj)
     Custom_AgentSetProperty("light_office05", "EnvLight - Spot Angle Inner", 5, sceneObj)
@@ -467,7 +468,7 @@ DrugStoreInterior = function(sceneObj)
     
     local light30 = AgentCreate("light_office06", envlight_prop, Vector(8.485707,1.604467,-1.311186), Vector(28.585510,-90.000000,0.000000), sceneObj, false, false)
     Custom_AgentSetProperty("light_office06", "EnvLight - Type", 0, sceneObj)
-    Custom_AgentSetProperty("light_office06", "EnvLight - Intensity", 2.3, sceneObj)
+    Custom_AgentSetProperty("light_office06", "EnvLight - Intensity", 2.3 + envlight_materIntensity, sceneObj)
     Custom_AgentSetProperty("light_office06", "EnvLight - Radius", 4.65, sceneObj)
     Custom_AgentSetProperty("light_office06", "EnvLight - Distance Falloff", 2, sceneObj)
     Custom_AgentSetProperty("light_office06", "EnvLight - Spot Angle Inner", 5, sceneObj)
@@ -481,7 +482,7 @@ DrugStoreInterior = function(sceneObj)
     
     local light31 = AgentCreate("light_office03", envlight_prop, Vector(7.024541,3.271215,5.223538), Vector(43.795681,-93.568405,-3.427944), sceneObj, false, false)
     Custom_AgentSetProperty("light_office03", "EnvLight - Type", 1, sceneObj)
-    Custom_AgentSetProperty("light_office03", "EnvLight - Intensity", 6.55, sceneObj)
+    Custom_AgentSetProperty("light_office03", "EnvLight - Intensity", 6.55 + envlight_materIntensity, sceneObj)
     Custom_AgentSetProperty("light_office03", "EnvLight - Radius", 7, sceneObj)
     Custom_AgentSetProperty("light_office03", "EnvLight - Distance Falloff", 2, sceneObj)
     Custom_AgentSetProperty("light_office03", "EnvLight - Spot Angle Inner", 5, sceneObj)
@@ -495,7 +496,7 @@ DrugStoreInterior = function(sceneObj)
     
     local light32 = AgentCreate("light_office04", envlight_prop, Vector(4.293126,3.008490,1.106305), Vector(28.992195,-48.791027,32.376320), sceneObj, false, false)
     Custom_AgentSetProperty("light_office04", "EnvLight - Type", 1, sceneObj)
-    Custom_AgentSetProperty("light_office04", "EnvLight - Intensity", 1, sceneObj)
+    Custom_AgentSetProperty("light_office04", "EnvLight - Intensity", 1 + envlight_materIntensity, sceneObj)
     Custom_AgentSetProperty("light_office04", "EnvLight - Radius", 7, sceneObj)
     Custom_AgentSetProperty("light_office04", "EnvLight - Distance Falloff", 2, sceneObj)
     Custom_AgentSetProperty("light_office04", "EnvLight - Spot Angle Inner", 5, sceneObj)
@@ -509,7 +510,7 @@ DrugStoreInterior = function(sceneObj)
     
     local light33 = AgentCreate("light_atm02", envlight_prop, Vector(3.923417,-0.904999,-2.429519), Vector(-120.613472,-99.871605,-1.475786), sceneObj, false, false)
     Custom_AgentSetProperty("light_atm02", "EnvLight - Type", 1, sceneObj)
-    Custom_AgentSetProperty("light_atm02", "EnvLight - Intensity", 1.45, sceneObj)
+    Custom_AgentSetProperty("light_atm02", "EnvLight - Intensity", 1.45 + envlight_materIntensity, sceneObj)
     Custom_AgentSetProperty("light_atm02", "EnvLight - Radius", 6.9, sceneObj)
     Custom_AgentSetProperty("light_atm02", "EnvLight - Distance Falloff", 4, sceneObj)
     Custom_AgentSetProperty("light_atm02", "EnvLight - Spot Angle Inner", 5, sceneObj)
@@ -523,7 +524,7 @@ DrugStoreInterior = function(sceneObj)
     
     local light34 = AgentCreate("light_atm03", envlight_prop, Vector(4.196242,-0.190567,-2.578872), Vector(-142.006378,-102.274765,14.157829), sceneObj, false, false)
     Custom_AgentSetProperty("light_atm03", "EnvLight - Type", 1, sceneObj)
-    Custom_AgentSetProperty("light_atm03", "EnvLight - Intensity", 0.5, sceneObj)
+    Custom_AgentSetProperty("light_atm03", "EnvLight - Intensity", 0.5 + envlight_materIntensity, sceneObj)
     Custom_AgentSetProperty("light_atm03", "EnvLight - Radius", 5.95, sceneObj)
     Custom_AgentSetProperty("light_atm03", "EnvLight - Distance Falloff", 4, sceneObj)
     Custom_AgentSetProperty("light_atm03", "EnvLight - Spot Angle Inner", 5, sceneObj)
@@ -537,7 +538,7 @@ DrugStoreInterior = function(sceneObj)
     
     local light35 = AgentCreate("light_lamp05", envlight_prop, Vector(0.307424,0.409313,0.158116), Vector(-157.809021,-0.000000,0.000000), sceneObj, false, false)
     Custom_AgentSetProperty("light_lamp05", "EnvLight - Type", 1, sceneObj)
-    Custom_AgentSetProperty("light_lamp05", "EnvLight - Intensity", 0.15, sceneObj)
+    Custom_AgentSetProperty("light_lamp05", "EnvLight - Intensity", 0.15 + envlight_materIntensity, sceneObj)
     Custom_AgentSetProperty("light_lamp05", "EnvLight - Radius", 5, sceneObj)
     Custom_AgentSetProperty("light_lamp05", "EnvLight - Distance Falloff", 4, sceneObj)
     Custom_AgentSetProperty("light_lamp05", "EnvLight - Spot Angle Inner", 5, sceneObj)
@@ -551,7 +552,7 @@ DrugStoreInterior = function(sceneObj)
     
     local light36 = AgentCreate("light_office07", envlight_prop, Vector(5.215880,1.559347,-0.910715), Vector(-171.126236,-84.322586,0.889343), sceneObj, false, false)
     Custom_AgentSetProperty("light_office07", "EnvLight - Type", 1, sceneObj)
-    Custom_AgentSetProperty("light_office07", "EnvLight - Intensity", 5.3, sceneObj)
+    Custom_AgentSetProperty("light_office07", "EnvLight - Intensity", 5.3 + envlight_materIntensity, sceneObj)
     Custom_AgentSetProperty("light_office07", "EnvLight - Radius", 3.65, sceneObj)
     Custom_AgentSetProperty("light_office07", "EnvLight - Distance Falloff", 2, sceneObj)
     Custom_AgentSetProperty("light_office07", "EnvLight - Spot Angle Inner", 34, sceneObj)
@@ -565,7 +566,7 @@ DrugStoreInterior = function(sceneObj)
     
     local light37 = AgentCreate("light_office08", envlight_prop, Vector(5.478865,1.600616,1.734366), Vector(-171.126236,-84.322586,0.889343), sceneObj, false, false)
     Custom_AgentSetProperty("light_office08", "EnvLight - Type", 1, sceneObj)
-    Custom_AgentSetProperty("light_office08", "EnvLight - Intensity", 5.3, sceneObj)
+    Custom_AgentSetProperty("light_office08", "EnvLight - Intensity", 5.3 + envlight_materIntensity, sceneObj)
     Custom_AgentSetProperty("light_office08", "EnvLight - Radius", 3.65, sceneObj)
     Custom_AgentSetProperty("light_office08", "EnvLight - Distance Falloff", 2, sceneObj)
     Custom_AgentSetProperty("light_office08", "EnvLight - Spot Angle Inner", 34, sceneObj)
@@ -579,7 +580,7 @@ DrugStoreInterior = function(sceneObj)
     
     local light38 = AgentCreate("light_office09", envlight_prop, Vector(5.653212,1.627973,4.509634), Vector(-171.126236,-84.322586,0.889343), sceneObj, false, false)
     Custom_AgentSetProperty("light_office09", "EnvLight - Type", 1, sceneObj)
-    Custom_AgentSetProperty("light_office09", "EnvLight - Intensity", 5.3, sceneObj)
+    Custom_AgentSetProperty("light_office09", "EnvLight - Intensity", 5.3 + envlight_materIntensity, sceneObj)
     Custom_AgentSetProperty("light_office09", "EnvLight - Radius", 3.65, sceneObj)
     Custom_AgentSetProperty("light_office09", "EnvLight - Distance Falloff", 2, sceneObj)
     Custom_AgentSetProperty("light_office09", "EnvLight - Spot Angle Inner", 34, sceneObj)
@@ -593,7 +594,7 @@ DrugStoreInterior = function(sceneObj)
     
     local light39 = AgentCreate("light_amb", envlight_prop, Vector(0.915504,1.528301,0.639207), Vector(0.000000,0.000000,0.000000), sceneObj, false, false)
     Custom_AgentSetProperty("light_amb", "EnvLight - Type", 3, sceneObj)
-    Custom_AgentSetProperty("light_amb", "EnvLight - Intensity", 0.005, sceneObj)
+    Custom_AgentSetProperty("light_amb", "EnvLight - Intensity", 0.01, sceneObj)
     Custom_AgentSetProperty("light_amb", "EnvLight - Radius", 5, sceneObj)
     Custom_AgentSetProperty("light_amb", "EnvLight - Distance Falloff", 2, sceneObj)
     Custom_AgentSetProperty("light_amb", "EnvLight - Spot Angle Inner", 5, sceneObj)
@@ -607,7 +608,7 @@ DrugStoreInterior = function(sceneObj)
     
     local light40 = AgentCreate("light_Shelf", envlight_prop, Vector(2.219095,1.201050,-0.111294), Vector(0.000000,0.000000,0.000000), sceneObj, false, false)
     Custom_AgentSetProperty("light_Shelf", "EnvLight - Type", 0, sceneObj)
-    Custom_AgentSetProperty("light_Shelf", "EnvLight - Intensity", 0.45, sceneObj)
+    Custom_AgentSetProperty("light_Shelf", "EnvLight - Intensity", 0.45 + envlight_materIntensity, sceneObj)
     Custom_AgentSetProperty("light_Shelf", "EnvLight - Radius", 2.45, sceneObj)
     Custom_AgentSetProperty("light_Shelf", "EnvLight - Distance Falloff", 3, sceneObj)
     Custom_AgentSetProperty("light_Shelf", "EnvLight - Spot Angle Inner", 5, sceneObj)
@@ -621,7 +622,7 @@ DrugStoreInterior = function(sceneObj)
     
     local light41 = AgentCreate("light_juiceBarLeftWall", envlight_prop, Vector(-2.315925,1.825007,1.209111), Vector(5.314844,16.144518,-34.026733), sceneObj, false, false)
     Custom_AgentSetProperty("light_juiceBarLeftWall", "EnvLight - Type", 1, sceneObj)
-    Custom_AgentSetProperty("light_juiceBarLeftWall", "EnvLight - Intensity", 0.35, sceneObj)
+    Custom_AgentSetProperty("light_juiceBarLeftWall", "EnvLight - Intensity", 0.35 + envlight_materIntensity, sceneObj)
     Custom_AgentSetProperty("light_juiceBarLeftWall", "EnvLight - Radius", 6.3, sceneObj)
     Custom_AgentSetProperty("light_juiceBarLeftWall", "EnvLight - Distance Falloff", 2, sceneObj)
     Custom_AgentSetProperty("light_juiceBarLeftWall", "EnvLight - Spot Angle Inner", 13, sceneObj)
@@ -632,6 +633,9 @@ DrugStoreInterior = function(sceneObj)
     Custom_AgentSetProperty("light_juiceBarLeftWall", "EnvLight - Shadow Type", envlight_shadowtype, sceneObj)
     Custom_AgentSetProperty("light_juiceBarLeftWall", "EnvLight - Shadow Quality", envlight_shadowquality, sceneObj)
     Custom_AgentSetProperty("light_juiceBarLeftWall", "EnvLight - HBAO Participation Type", envlight_hbaoParticipation, sceneObj)
+    
+    
+    
     
     --characters
     local duck_prop = "sk56_duck.prop"
@@ -646,6 +650,11 @@ DrugStoreInterior = function(sceneObj)
     Custom_AgentSetProperty("Duck", "WDUseable - Action Use Chore", duck_wdusable_actionuse_chore, sceneObj)
     Custom_AgentSetProperty("Duck", "Game Selectable", true, sceneObj)
     Custom_AgentSetProperty("Duck", "WDUseable - Use Activate On Look", true, sceneObj)
+    --308285618.mp3
+    --duck_face_sadA.anm
+    --duck_face_normalA.anm
+    --Mom, Im not a zombie, Im not.
+    
     
     local carley_prop = "sk55_carley.prop"
     local carley = AgentCreate("Carley", carley_prop, Vector(0.487534,0.257507,-0.937622), Vector(0.000000,-175.049728,0.000000), sceneObj, false, false)
@@ -659,6 +668,11 @@ DrugStoreInterior = function(sceneObj)
     Custom_AgentSetProperty("Carley", "WDUseable - Action Use Chore", carley_wdusable_actionuse_chore, sceneObj)
     Custom_AgentSetProperty("Carley", "Game Selectable", true, sceneObj)
     Custom_AgentSetProperty("Carley", "WDUseable - Use Activate On Look", true, sceneObj)
+    --308285813.mp3
+    --308285813.anm
+    --duck_face_sadA.anm
+    --duck_face_normalA.anm
+    --Let me know as soon as you want to head out. I could use a jog.
     
     local doug_prop = "sk54_doug.prop"
     local doug = AgentCreate("Doug", doug_prop, Vector(0.000000,0.000000,-4.705872), Vector(0.000000,0.000000,0.000000), sceneObj, false, false)
@@ -672,7 +686,9 @@ DrugStoreInterior = function(sceneObj)
     Custom_AgentSetProperty("Doug", "WDUseable - Action Use Chore", doug_wdusable_actionuse_chore, sceneObj)
     Custom_AgentSetProperty("Doug", "Game Selectable", true, sceneObj)
     Custom_AgentSetProperty("Doug", "WDUseable - Use Activate On Look", true, sceneObj)
-    
+    --308285467.mp3
+    --308285467.anm
+    --I dont know if those boards are going to last for too long...
     
     local glenn_prop = "sk54_glenn.prop"
     local glenn = AgentCreate("Glenn", glenn_prop, Vector(0.000000,0.000000,-2.417847), Vector(0.000000,0.000000,0.000000), sceneObj, false, false)
@@ -686,6 +702,13 @@ DrugStoreInterior = function(sceneObj)
     Custom_AgentSetProperty("Glenn", "WDUseable - Action Use Chore", glenn_wdusable_actionuse_chore, sceneObj)
     Custom_AgentSetProperty("Glenn", "Game Selectable", true, sceneObj)
     Custom_AgentSetProperty("Glenn", "WDUseable - Use Activate On Look", true, sceneObj)
+    Custom_AgentSetProperty("Glenn", "Useable - Verb Preset", true, sceneObj)
+    Custom_AgentSetProperty("Glenn", "Useable - Hide On Use", true, sceneObj)
+    --308285849.mp3
+    --308285849.anm
+    --glenn_face_fearA.anm
+    --glenn_face_normalA.anm
+    --Im starting to think this drugstore isn't a permanent solution.
     
     local katjaa_prop = "sk55_katjaa.prop"
     local katjaa = AgentCreate("Katjaa", katjaa_prop, Vector(-3.431702,0.000000,4.726501), Vector(0.000000,163.858902,0.000000), sceneObj, false, false)
@@ -699,6 +722,8 @@ DrugStoreInterior = function(sceneObj)
     Custom_AgentSetProperty("Katjaa", "WDUseable - Action Use Chore", katjaa_wdusable_actionuse_chore, sceneObj)
     Custom_AgentSetProperty("Katjaa", "Game Selectable", true, sceneObj)
     Custom_AgentSetProperty("Katjaa", "WDUseable - Use Activate On Look", true, sceneObj)
+    --308285847.mp3
+    --i dont know how were going to get comfortable on this cold floor. and how safe is this place anyway?
     
     local kenny_prop = "sk54_kenny.prop"
     local kenny = AgentCreate("Kenny", kenny_prop, Vector(4.318787,0.000000,2.592651), Vector(0.000000,0.000000,0.000000), sceneObj, false, false)
@@ -712,7 +737,8 @@ DrugStoreInterior = function(sceneObj)
     Custom_AgentSetProperty("Kenny", "WDUseable - Action Use Chore", kenny_wdusable_actionuse_chore, sceneObj)
     Custom_AgentSetProperty("Kenny", "Game Selectable", true, sceneObj)
     Custom_AgentSetProperty("Kenny", "WDUseable - Use Activate On Look", true, sceneObj)
-    
+    --308286421.mp3
+    --were gonna have to think about how were getting everyone out of here with my truck on empty
     
     local larry_prop = "sk54_larry.prop"
     local larry = AgentCreate("Larry", larry_prop, Vector(3.331299,0.000000,4.240662), Vector(0.000000,158.496994,0.000000), sceneObj, false, false)
@@ -726,6 +752,8 @@ DrugStoreInterior = function(sceneObj)
     Custom_AgentSetProperty("Larry", "WDUseable - Action Use Chore", larry_wdusable_actionuse_chore, sceneObj)
     Custom_AgentSetProperty("Larry", "Game Selectable", true, sceneObj)
     Custom_AgentSetProperty("Larry", "WDUseable - Use Activate On Look", true, sceneObj)
+    --308285654.mp3
+    --I've taken care of tougher pieces of shit than you. I was in wars, goddammit!
     
     local lilly_prop = "sk55_lilly.prop"
     local lilly = AgentCreate("Lilly", lilly_prop, Vector(4.794800,0.000000,-2.841812), Vector(0.000000,-98.461662,0.000000), sceneObj, false, false)
@@ -739,6 +767,9 @@ DrugStoreInterior = function(sceneObj)
     Custom_AgentSetProperty("Lilly", "WDUseable - Action Use Chore", lilly_wdusable_actionuse_chore, sceneObj)
     Custom_AgentSetProperty("Lilly", "Game Selectable", true, sceneObj)
     Custom_AgentSetProperty("Lilly", "WDUseable - Use Activate On Look", true, sceneObj)
+    --308285629.mp3
+    --308285629.anm
+    --look were fish in a barrel here. with all the commotion we could be under siege any minute.
     
     --DevTools_AgentMenuTool_GetValidPropertyNames(duck)
     
@@ -779,6 +810,14 @@ DrugStoreInterior = function(sceneObj)
     --PrintSceneLightsToTXT(sceneObj, "trainstation-lights.txt")
     
     SetPropertyOnAllCameras(sceneObj, "Field of View Scale", 1.5)
+    
+    --sound
+    CustomSound_Ambient_Setup("soundCustom_ambient", sceneObj)
+    --local amb_mus_soundFile = "tlou2_graveyard.wav"
+    local amb_mus_soundFile = "mus_loop_ambient_01.wav"
+    --local amb_mus_soundFile = "mus_linear_clementine_01.wav"
+    CustomSound_Ambient_SetProperties("soundCustom_ambient", amb_mus_soundFile, 5.0, 1.0, sceneObj)
+    CustomSound_Ambient_Play("soundCustom_ambient", 1.0, sceneObj)
 end
 
 ModifyScene = function(sceneObj)
@@ -1387,12 +1426,16 @@ CleanUpExistingTrainScene = function(sceneObj)
     local agent164 = AgentFindInScene("obj_mirrorMuscleCarRenderToTexture", sceneObj)
     local agent165 = AgentFindInScene("obj_mirrorMuscleCar", sceneObj)
     local agent166 = AgentFindInScene("obj_seatBeltMuscleCar", sceneObj)
+    local agent167 = AgentFindInScene("obj_knifeKaBar", sceneObj)
+    local agent168 = AgentFindInScene("obj_pryBar", sceneObj)
     destroyMe(agent161)
     destroyMe(agent162)
     destroyMe(agent163)
     destroyMe(agent164)
     destroyMe(agent165)
     destroyMe(agent166)
+    destroyMe(agent167)
+    destroyMe(agent168)
 end
 
 CreateClemHouse = function(sceneObj)
@@ -1897,13 +1940,6 @@ TrainStation = function()
     ControllerDisableTimeSync(agent_controller, true)
     ControllerSetLooping(agent_controller, true)
     
-    
-    
-    --sound
-    CustomSound_Ambient_Setup("soundCustom_ambient", kScene)
-    local amb_mus_soundFile = "tlou2_graveyard.wav"
-    CustomSound_Ambient_SetProperties("soundCustom_ambient", amb_mus_soundFile, 5.0, 1.0, kScene)
-    CustomSound_Ambient_Play("soundCustom_ambient", 1.0, kScene)
     
     
     
