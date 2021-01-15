@@ -15,6 +15,925 @@ local clemHouseTest = "adv_clementineHouse400.scene"
 --SceneOpen(sceneName, "Game_OnSceneOpened", bFadeInString)
 
 
+MotorInnEnv = function(sceneObj)
+    ResourceSetEnable("ProjectSeason1")
+    ResourceSetEnable("WalkingDead102")
+    
+    RemovingAgentsWithPrefix(sceneObj, "lightrig_")
+    RemovingAgentsWithPrefix(sceneObj, "light_CHAR")
+    RemovingAgentsWithPrefix(sceneObj, "lightrotation_CC")
+    --RemovingAgentsWithPrefix(sceneObj, "light_")
+    
+    --local motorinn102_wbox = "adv_motorInn102.wbox"
+    --SceneSetWalkBoxes(sceneObj, nil)
+    PropertyRemove(sceneObj, "Walk Boxes")
+    
+    --main scene meshes
+    local agent1_prop = "adv_motorInn102_meshesA.prop"
+    local agent1      = AgentCreate("adv_motorInn102_meshesA", agent1_prop, Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent2_prop = "adv_motorInn102_meshesB.prop"
+    local agent2      = AgentCreate("adv_motorInn102_meshesB", agent2_prop, Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent3_prop = "adv_motorInn102_meshesC.prop"
+    local agent3      = AgentCreate("adv_motorInn102_meshesC", agent3_prop, Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent4_prop = "adv_motorInn102_meshesD.prop"
+    local agent4      = AgentCreate("adv_motorInn102_meshesD", agent4_prop, Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent5_prop = "adv_motorInn102_meshesE.prop"
+    local agent5      = AgentCreate("adv_motorInn102_meshesE", agent5_prop, Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent6_prop = "adv_motorInn102_meshesF.prop"
+    local agent6      = AgentCreate("adv_motorInn102_meshesF", agent6_prop, Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent7_prop = "adv_motorInn102_meshesG.prop"
+    local agent7      = AgentCreate("adv_motorInn102_meshesG", agent7_prop, Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent8_prop = "adv_motorInn102_meshesH.prop"
+    local agent8      = AgentCreate("adv_motorInn102_meshesH", agent8_prop, Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent9_prop = "adv_motorInn102_meshesI.prop"
+    local agent9      = AgentCreate("adv_motorInn102_meshesI", agent9_prop, Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent10_prop = "adv_motorInn102_meshesJ.prop"
+    local agent10      = AgentCreate("adv_motorInn102_meshesJ", agent10_prop, Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent11_prop = "adv_motorInn102_distGround.prop"
+    local agent11      = AgentCreate("adv_motorInn102_distGround", agent11_prop, Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent12_prop = "adv_motorInn102_distTrees.prop"
+    local agent12      = AgentCreate("adv_motorInn102_distTrees", agent12_prop, Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent13_prop = "adv_motorInn102_meshesA_decals.prop"
+    local agent13      = AgentCreate("adv_motorInn102_meshesA_decals", agent13_prop, Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent14_prop = "adv_motorInn102_meshesB_decals.prop"
+    local agent14      = AgentCreate("adv_motorInn102_meshesB_decals", agent14_prop, Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent15_prop = "adv_motorInn102_meshesC_decals.prop"
+    local agent15      = AgentCreate("adv_motorInn102_meshesC_decals", agent15_prop, Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent16_prop = "adv_motorInn102_meshesD_decals.prop"
+    local agent16      = AgentCreate("adv_motorInn102_meshesD_decals", agent16_prop, Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent17_prop = "adv_motorInn102_meshesE_decals.prop"
+    local agent17      = AgentCreate("adv_motorInn102_meshesE_decals", agent17_prop, Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent18_prop = "adv_motorInn102_meshesF_decals.prop"
+    local agent18      = AgentCreate("adv_motorInn102_meshesF_decals", agent18_prop, Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent19_prop = "adv_motorInn102_meshesJ_decals.prop"
+    local agent19      = AgentCreate("adv_motorInn102_meshesJ_decals", agent19_prop, Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    
+    --scene objects
+    local agent20_prop = "obj_twoByFourBroken_Larry.prop"
+    local agent20      = AgentCreate("obj_twoByFourBroken_Larry", agent20_prop, Vector(-0.123555,0.504024,11.901032), Vector(0,0,0), sceneObj, false, false)
+    local agent21_prop = "obj_walkieTalkieWD.prop"
+    local agent21      = AgentCreate("obj_walkieTalkieWD", agent21_prop, Vector(-12.369899,0.124556,3.755095), Vector(-90.000000,165.618561,0.000000), sceneObj, false, false)
+    local agent22_prop = "obj_dumpsterDoorLeft.prop"
+    local agent22      = AgentCreate("obj_dumpsterDoorLeft", agent22_prop, Vector(-0.707709,0.240889,-5.316444), Vector(0.000000,90.000000,0.000000), sceneObj, false, false)
+    local agent23_prop = "obj_dumpsterDoorRight.prop"
+    local agent23      = AgentCreate("obj_dumpsterDoorRight", agent23_prop, Vector(-0.727128,0.221135,-1.615026), Vector(0.000000,90.000000,0.000000), sceneObj, false, false)
+    local agent24_prop = "obj_couchMotorInn102.prop"
+    local agent24      = AgentCreate("obj_couchMotorInn102", agent24_prop, Vector(-14.513737,0.078035,-3.919768), Vector(-0.000000,-78.904388,0.000000), sceneObj, false, false)
+    local agent25_prop = "obj_doorAMotorInn102.prop"
+    local agent25      = AgentCreate("obj_doorAMotorInn102", agent25_prop, Vector(-19.807781,0.215873,7.012089), Vector(0.000000,180.000000,0.000000), sceneObj, false, false)
+    local agent26_prop = "obj_foldingChairMotorInn102A.prop"
+    local agent26      = AgentCreate("obj_foldingChairMotorInn102A", agent26_prop, Vector(-11.219788,0.073414,4.606461), Vector(-0.000000,-89.574951,0.000000), sceneObj, false, false)
+    local agent27_prop = "obj_foldingChairMotorInn102B.prop"
+    local agent27      = AgentCreate("obj_foldingChairMotorInn102B", agent27_prop, Vector(-11.638405,0.073414,5.873764), Vector(-0.000000,-134.366989,0.000000), sceneObj, false, false)
+    local agent28_prop = "obj_foldingChairMotorInn102C.prop"
+    local agent28      = AgentCreate("obj_foldingChairMotorInn102C", agent28_prop, Vector(-14.520609,0.073414,3.136005), Vector(0.000000,36.879192,0.000000), sceneObj, false, false)
+    local agent29_prop = "obj_stoolChairMotorInn102.prop"
+    local agent29      = AgentCreate("obj_stoolChairMotorInn102", agent29_prop, Vector(-14.339134,0.078114,-4.901412), Vector(0.000000,-9.546896,0.000000), sceneObj, false, false)
+    local agent30_prop = "obj_woodChairMotorInn102A.prop"
+    local agent30      = AgentCreate("obj_woodChairMotorInn102A", agent30_prop, Vector(-12.539411,0.077546,-1.806105), Vector(0.000000,-60.449596,0.000000), sceneObj, false, false)
+    local agent31_prop = "obj_truckMotorInn.prop"
+    local agent31      = AgentCreate("obj_truckMotorInn", agent31_prop, Vector(-1.774176,0.094634,-8.474756), Vector(0.000000,136.592133,0.000000), sceneObj, false, false)
+    local agent32_prop = "obj_bookcaseMotorInn102.prop"
+    local agent32      = AgentCreate("obj_bookcaseMotorInn102", agent32_prop, Vector(-0.022588,0.085693,-6.403050), Vector(0.000000,-131.027603,0.000000), sceneObj, false, false)
+    local agent33_prop = "obj_dumpstersMotorInn102.prop"
+    local agent33      = AgentCreate("obj_dumpstersMotorInn102", agent33_prop, Vector(0.275373,0.085000,-3.463989), Vector(0.000000,-90.250122,0.000000), sceneObj, false, false)
+    local agent34_prop = "obj_fenceMotorInn102.prop"
+    local agent34      = AgentCreate("obj_fenceMotorInn102", agent34_prop, Vector(-0.396810,0.085000,5.417955), Vector(0.000000,-90.000000,0.000000), sceneObj, false, false)
+    local agent35_prop = "obj_ballSoccerWD.prop"
+    local agent35      = AgentCreate("obj_ballSoccerWD", agent35_prop, Vector(-7.408075,0.228000,6.558214), Vector(0.000000,0.000000,0.000000), sceneObj, false, false)
+    local agent36_prop = "obj_tableMotorInn102.prop"
+    local agent36      = AgentCreate("obj_tableMotorInn102", agent36_prop, Vector(-12.679464,0.850747,-0.337757), Vector(0.000000,34.902512,0.000000), sceneObj, false, false)
+    local agent37_prop = "obj_motorInnRVHood.prop"
+    local agent37      = AgentCreate("obj_motorInnRVHood", agent37_prop, Vector(-9.985725,1.500606,-1.179242), Vector(-47.021503,29.969158,-0.000005), sceneObj, false, false)
+    local agent38_prop = "obj_tarpRVMotorInn102.prop"
+    local agent38      = AgentCreate("obj_tarpRVMotorInn102", agent38_prop, Vector(-13.941673,2.881367,-2.651203), Vector(7.999997,-59.999985,-0.000029), sceneObj, false, false)
+    local agent39_prop = "obj_foldingChairMotorInn102D.prop"
+    local agent39      = AgentCreate("obj_foldingChairMotorInn102D", agent39_prop, Vector(-10.754545,3.137827,-1.329365), Vector(0.000000,27.835926,0.000000), sceneObj, false, false)
+    local agent40_prop = "obj_drawingsDuck.prop"
+    local agent40      = AgentCreate("obj_drawingsDuck", agent40_prop, Vector(-12.951286,0.120589,3.656634), Vector(-90.000008,-77.370186,0.000002), sceneObj, false, false)
+    local agent41_prop = "obj_drawingsClementine.prop"
+    local agent41      = AgentCreate("obj_drawingsClementine", agent41_prop, Vector(-12.581902,0.119670,3.655856), Vector(-90.760216,141.355942,0.607857), sceneObj, false, false)
+    local agent42_prop = "obj_crayonsClementineA.prop"
+    local agent42      = AgentCreate("obj_crayonsClementineA", agent42_prop, Vector(-9.116964,1.119707,4.170838), Vector(0.000000,0.000000,0.000000), sceneObj, false, false)
+    local agent43_prop = "obj_barrelsOilMotorInn102.prop"
+    local agent43      = AgentCreate("obj_barrelsOilMotorInn102", agent43_prop, Vector(-5.541552,0.556426,6.150789), Vector(0.000000,59.673145,0.000000), sceneObj, false, false)
+    local agent44_prop = "obj_balconyFallen102.prop"
+    local agent44      = AgentCreate("obj_balconyFallen102", agent44_prop, Vector(0.000000,0.000000,0.000000), Vector(0.000000,0.000000,0.000000), sceneObj, false, false)
+    local agent45_prop = "obj_skinTorn_David.prop"
+    local agent45      = AgentCreate("obj_skinTorn_David", agent45_prop, Vector(-9.116964,-0.218122,4.170838), Vector(0.000000,0.000000,0.000000), sceneObj, false, false)
+    local agent46_prop = "obj_gunPistol.prop"
+    local agent46      = AgentCreate("obj_gunPistol", agent46_prop, Vector(-26.587086,-0.768378,7.954010), Vector(0.000000,0.000000,0.000000), sceneObj, false, false)
+    local agent47_prop = "obj_DavidHead.prop"
+    local agent47      = AgentCreate("obj_DavidHead", agent47_prop, Vector(-0.000071,-0.006786,-0.000191), Vector(0.000001,-0.000002,0.000001), sceneObj, false, false)
+    --a
+    local agent48_prop = "obj_ballSoccerWD_clementine.prop"
+    local agent48      = AgentCreate("obj_ballSoccerWD_clementine", agent48_prop, Vector(-7.408075,0.228000,6.558214), Vector(0.000000,0.000000,0.000000), sceneObj, false, false)
+    local agent49_prop = "obj_rifleScoped_Lilly.prop"
+    local agent49      = AgentCreate("obj_rifleScoped_Lilly", agent49_prop, Vector(-10.497156,4.667303,-0.596522), Vector(1.419317,42.771355,0.594607), sceneObj, false, false)
+    local agent50_prop = "obj_plankSmall.prop"
+    local agent50      = AgentCreate("obj_plankSmall", agent50_prop, Vector(0.000000,0.000000,0.000000), Vector(0.000000,0.000000,0.000000), sceneObj, false, false)
+    --b
+    local agent51_prop = "obj_rifleScoped_Kenny.prop"
+    local agent51      = AgentCreate("obj_rifleScoped_Kenny", agent51_prop, Vector(-10.240962,-2.989329,0.524856), Vector(-3.437537,68.731873,-7.931250), sceneObj, false, false)
+    local agent52_prop = "obj_ratchetWDMotorInn102.prop"
+    local agent52      = AgentCreate("obj_ratchetWDMotorInn102", agent52_prop, Vector(0.000000,0.000000,0.000000), Vector(0.000000,0.000000,0.000000), sceneObj, false, false)
+    local agent53_prop = "obj_backpackWD102.prop"
+    local agent53      = AgentCreate("obj_backpackWD102", agent53_prop, Vector(-8.684858,0.073208,-1.612226), Vector(3.264503,-47.879189,-1.158723), sceneObj, false, false)
+    local agent54_prop = "obj_radiatorHoseLower.prop"
+    local agent54      = AgentCreate("obj_radiatorHoseLower", agent54_prop, Vector(-14.244750,1.090512,-3.282860), Vector(0.000000,0.000000,0.000000), sceneObj, false, false)
+    local agent55_prop = "obj_radiatorHoseLower_Kenny.prop"
+    local agent55      = AgentCreate("obj_radiatorHoseLower_Kenny", agent55_prop, Vector(-14.244750,1.090512,-3.282860), Vector(0.000000,0.000000,0.000000), sceneObj, false, false)
+    local agent56_prop = "obj_fenceMotorInn102PieceA.prop"
+    local agent56      = AgentCreate("obj_fenceMotorInn102PieceA", agent56_prop, Vector(-8.226261,0.088747,-4.566879), Vector(-0.763838,15.443101,-0.265327), sceneObj, false, false)
+    local agent57_prop = "obj_fenceMotorInn102PieceB.prop"
+    local agent57      = AgentCreate("obj_fenceMotorInn102PieceB", agent57_prop, Vector(0.000000,0.000000,0.000000), Vector(0.000000,0.000000,0.000000), sceneObj, false, false)
+    local agent58_prop = "obj_fenceMotorInn102PieceC.prop"
+    local agent58      = AgentCreate("obj_fenceMotorInn102PieceC", agent58_prop, Vector(-7.439246,0.801349,-4.994436), Vector(-73.120811,-57.320961,-0.805494), sceneObj, false, false)
+    local agent59_prop = "obj_fenceMotorInn102PieceD.prop"
+    local agent59      = AgentCreate("obj_fenceMotorInn102PieceD", agent59_prop, Vector(-1.292084,0.290344,0.390869), Vector(0.000000,65.460754,0.000000), sceneObj, false, false)
+    local agent60_prop = "obj_fenceMotorInn102PieceE.prop"
+    local agent60      = AgentCreate("obj_fenceMotorInn102PieceE", agent60_prop, Vector(-0.980652,0.433838,3.740417), Vector(0.000000,0.000000,57.001953), sceneObj, false, false)
+    local agent61_prop = "obj_fenceMotorInn102PieceF.prop"
+    local agent61      = AgentCreate("obj_fenceMotorInn102PieceF", agent61_prop, Vector(-1.236389,0.133850,3.153320), Vector(0.000000,-31.399218,0.000000), sceneObj, false, false)
+    local agent62_prop = "obj_fenceMotorInn102PieceE01.prop"
+    local agent62      = AgentCreate("obj_fenceMotorInn102PieceE01", agent62_prop, Vector(-1.023499,0.459290,3.038818), Vector(-40.971191,-0.000006,57.001934), sceneObj, false, false)
+    --c
+    local agent63_prop = "obj_truckMotorInnWindow.prop"
+    local agent63      = AgentCreate("obj_truckMotorInnWindow", agent63_prop, Vector(-0.000013,1.174773,-0.299787), Vector(0.000000,0.000000,0.000000), sceneObj, false, false)
+    --local agent66_prop = "obj_rockWD_Larry.prop"
+    --local agent66      = AgentCreate("obj_rockWD_Larry", agent66_prop, Vector(-3.636447,7.651958,0.419371), Vector(0.000000,0.000000,0.000000), sceneObj, false, false)
+   
+    --[[
+    local agent64_prop = "obj_truckMotorInnBrokenWindow.prop"
+    local agent64      = AgentCreate("obj_truckMotorInnBrokenWindow", agent64_prop, Vector(-0.000013,1.174773,-0.299787), Vector(0.000000,0.000000,0.000000), sceneObj, false, false)
+    --issue
+    local agent65_prop = "obj_boardSwingUncut.prop"
+    local agent65      = AgentCreate("obj_boardSwingUncut", agent65_prop, Vector(-0.477071,1.374282,5.572461), Vector(-103.273140,0.000000,0.000000), sceneObj, false, false)
+    --issue
+    local agent67_prop = "obj_cabinetBlockerMotorInn102.prop"
+    local agent67      = AgentCreate("obj_cabinetBlockerMotorInn102", agent67_prop, Vector(-6.392874,0.444604,-7.294099), Vector(0.000000,0.000000,0.000000), sceneObj, false, false)
+    local agent68_prop = "obj_carCrashedMotorInn102.prop"
+    local agent68      = AgentCreate("obj_carCrashedMotorInn102", agent68_prop, Vector(-0.000013,1.174773,-0.299787), Vector(0.000000,0.000000,0.000000), sceneObj, false, false)
+    --issue
+    local agent69_prop = "obj_lightsSignMotorInn102w.prop"
+    local agent69      = AgentCreate("obj_lightsSignMotorInn102w", agent69_prop, Vector(-0.000013,1.174773,-0.299787), Vector(0.000000,0.000000,0.000000), sceneObj, false, false)
+    ]]--
+    local sceneLightRef  = AgentFindInScene("light_ENV_exterior_ambFill", sceneObj)
+    local sceneLightRef_props = AgentGetRuntimeProperties(sceneLightRef)
+    
+    local envlight_groupEnabled = PropertyGet(sceneLightRef_props, "EnvLight - Enabled Group")
+    local envlight_groups = PropertyGet(sceneLightRef_props, "EnvLight - Groups")
+    local envlight_shadowtype = 2
+    local envlight_shadowquality = 2
+    local envlight_hbaoParticipation = 1 --0 being ambient, 1 being direct
+    local envlight_materIntensity = 0.0
+    local envlight_prop = "module_env_light.prop"
+
+    --RemovingAgentsWithPrefix(sceneObj, "light_")
+    
+    --[[
+    local sunColor     = RGBColor(255, 230, 198, 255) --RGBColor(255, 245, 227, 255)
+    local ambientColor = RGBColor(108, 170, 225, 255) 
+    local skyColor     = RGBColor(24, 99, 205, 255)
+    local fogColor     = Desaturate_RGBColor(skyColor, 0.45)
+    skyColor = Desaturate_RGBColor(skyColor, 0.3)
+    
+    local light1 = AgentCreate("light_ENV_Sun", envlight_prop, Vector(0,0,0), Vector(100, -22, 40), sceneObj, false, false)
+    Custom_AgentSetProperty("light_ENV_Sun", "EnvLight - Type", 2, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Sun", "EnvLight - Intensity", 6 + envlight_materIntensity, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Sun", "EnvLight - Radius", 1, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Sun", "EnvLight - Distance Falloff", 1, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Sun", "EnvLight - Spot Angle Inner", 5, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Sun", "EnvLight - Spot Angle Outer", 45, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Sun", "EnvLight - Color", sunColor, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Sun", "EnvLight - Enabled Group", envlight_groupEnabled, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Sun", "EnvLight - Groups", envlight_groups, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Sun", "EnvLight - Shadow Type", 3, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Sun", "EnvLight - Wrap", 0.1, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Sun", "EnvLight - Shadow Quality", envlight_shadowquality, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Sun", "EnvLight - HBAO Participation Type", envlight_hbaoParticipation, sceneObj)
+    
+    local light2 = AgentCreate("light_ENV_A_2", envlight_prop, Vector(0.316396,1.283947,-1.390468), Vector(90,0,0), sceneObj, false, false)
+    Custom_AgentSetProperty("light_ENV_A_2", "EnvLight - Type", 3, sceneObj)
+    Custom_AgentSetProperty("light_ENV_A_2", "EnvLight - Intensity", 0.35 + envlight_materIntensity, sceneObj)
+    Custom_AgentSetProperty("light_ENV_A_2", "EnvLight - Radius", 1, sceneObj)
+    Custom_AgentSetProperty("light_ENV_A_2", "EnvLight - Distance Falloff", 1, sceneObj)
+    Custom_AgentSetProperty("light_ENV_A_2", "EnvLight - Spot Angle Inner", 5, sceneObj)
+    Custom_AgentSetProperty("light_ENV_A_2", "EnvLight - Spot Angle Outer", 45, sceneObj)
+    Custom_AgentSetProperty("light_ENV_A_2", "EnvLight - Color", ambientColor, sceneObj)
+    Custom_AgentSetProperty("light_ENV_A_2", "EnvLight - Enabled Group", envlight_groupEnabled, sceneObj)
+    Custom_AgentSetProperty("light_ENV_A_2", "EnvLight - Groups", envlight_groups, sceneObj)
+    Custom_AgentSetProperty("light_ENV_A_2", "EnvLight - Shadow Type", envlight_shadowtype, sceneObj)
+    Custom_AgentSetProperty("light_ENV_A_2", "EnvLight - Shadow Quality", envlight_shadowquality, sceneObj)
+    Custom_AgentSetProperty("light_ENV_A_2", "EnvLight - HBAO Participation Type", envlight_hbaoParticipation, sceneObj)
+    
+    local light3 = AgentCreate("light_ENV_Skylight", envlight_prop, Vector(0,0,0), Vector(90, 0, 0), sceneObj, false, false)
+    Custom_AgentSetProperty("light_ENV_Skylight", "EnvLight - Type", 4, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Skylight", "EnvLight - Intensity", 1, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Skylight", "EnvLight - Radius", 1, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Skylight", "EnvLight - Distance Falloff", 1, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Skylight", "EnvLight - Spot Angle Inner", 5, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Skylight", "EnvLight - Spot Angle Outer", 45, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Skylight", "EnvLight - Color", skyColor, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Skylight", "EnvLight - Enabled Group", envlight_groupEnabled, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Skylight", "EnvLight - Groups", envlight_groups, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Skylight", "EnvLight - Shadow Type", 2, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Skylight", "EnvLight - Shadow Quality", envlight_shadowquality, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Skylight", "EnvLight - HBAO Participation Type", envlight_hbaoParticipation, sceneObj)
+    
+    destroyMe(sceneLightRef)
+    ]]--
+    
+    --characters
+    local duck_prop = "sk56_duckAltShirt.prop"
+    local duck = AgentCreate("Duck", duck_prop, Vector(-13.269074,0.085000,3.083211), Vector(0.000000,17.894829,0.000000), sceneObj, false, false)
+    local duck_idle_chore = "adv_motorInn102Act1_duckColoring.chore"
+    local duck_wdusable_actionenter_chore = ""
+    local duck_wdusable_actionexit_chore = ""
+    local duck_wdusable_actionuse_chore = "sk56_idle_duckStandA.chore"
+    Custom_AgentSetProperty("Duck", "Walk Animation - Idle", duck_idle_chore, sceneObj)
+    Custom_AgentSetProperty("Duck", "WDUseable - Action Enter Chore", duck_wdusable_actionenter_chore, sceneObj)
+    Custom_AgentSetProperty("Duck", "WDUseable - Action Exit Chore", duck_wdusable_actionexit_chore, sceneObj)
+    Custom_AgentSetProperty("Duck", "WDUseable - Action Use Chore", duck_wdusable_actionuse_chore, sceneObj)
+    Custom_AgentSetProperty("Duck", "Game Selectable", true, sceneObj)
+    Custom_AgentSetProperty("Duck", "WDUseable - Use Activate On Look", true, sceneObj)
+
+
+    local carley_prop = "sk55_carleyVest.prop"
+    local carley = AgentCreate("Carley", carley_prop, Vector(-14.251894,0.031804,3.467190), Vector(-5.874913,35.263039,0.000001), sceneObj, false, false)
+    --local carley_idle_chore = "adv_motorInn102act1_carleySitting.chore"
+    local carley_idle_chore = "adv_motorInn_carley_puppyEyes.chore"
+    local carley_wdusable_actionenter_chore = ""
+    local carley_wdusable_actionexit_chore = ""
+    local carley_wdusable_actionuse_chore = "adv_strugstoreact3_carleyRadio_leeInteraction.chore"
+    Custom_AgentSetProperty("Carley", "Walk Animation - Idle", carley_idle_chore, sceneObj)
+    Custom_AgentSetProperty("Carley", "WDUseable - Action Enter Chore", carley_wdusable_actionenter_chore, sceneObj)
+    Custom_AgentSetProperty("Carley", "WDUseable - Action Exit Chore", carley_wdusable_actionexit_chore, sceneObj)
+    Custom_AgentSetProperty("Carley", "WDUseable - Action Use Chore", carley_wdusable_actionuse_chore, sceneObj)
+    Custom_AgentSetProperty("Carley", "Game Selectable", true, sceneObj)
+    Custom_AgentSetProperty("Carley", "WDUseable - Use Activate On Look", true, sceneObj)
+    --310522926.wav
+    --you okay?
+    --clementine400_faceGesture_smileL_add.anm
+    --sk62_idle_clementine400Hips.chore
+    
+    local katjaa_prop = "sk55_katjaaJacket.prop"
+    local katjaa = AgentCreate("Katjaa", katjaa_prop, Vector(-4.217170,0.085612,-6.410555), Vector(0.000000,127.811615,0.000000), sceneObj, false, false)
+    local katjaa_idle_chore = "adv_motorInn102act1_katjaaTreatDavid.chore"
+    local katjaa_wdusable_actionenter_chore = ""
+    local katjaa_wdusable_actionexit_chore = ""
+    local katjaa_wdusable_actionuse_chore = "adv_drugstoreact3_katjaaDirtyDuck.chore"
+    Custom_AgentSetProperty("Katjaa", "Walk Animation - Idle", katjaa_idle_chore, sceneObj)
+    Custom_AgentSetProperty("Katjaa", "WDUseable - Action Enter Chore", katjaa_wdusable_actionenter_chore, sceneObj)
+    Custom_AgentSetProperty("Katjaa", "WDUseable - Action Exit Chore", katjaa_wdusable_actionexit_chore, sceneObj)
+    Custom_AgentSetProperty("Katjaa", "WDUseable - Action Use Chore", katjaa_wdusable_actionuse_chore, sceneObj)
+    Custom_AgentSetProperty("Katjaa", "Game Selectable", true, sceneObj)
+    Custom_AgentSetProperty("Katjaa", "WDUseable - Use Activate On Look", true, sceneObj)
+
+    
+    local kenny_prop = "sk54_kennyAltShirt.prop"
+    local kenny = AgentCreate("Kenny", kenny_prop, Vector(-14.932722,0.088772,-3.430504), Vector(-15.883155,15.897252,-2.215285), sceneObj, false, false)
+    local kenny_idle_chore = "adv_motorInn102act1_kennySittingCouch.chore"
+    local kenny_wdusable_actionenter_chore = ""
+    local kenny_wdusable_actionexit_chore = ""
+    local kenny_wdusable_actionuse_chore = "adv_drugstore_kennyExtendsHand.chore"
+    Custom_AgentSetProperty("Kenny", "Walk Animation - Idle", kenny_idle_chore, sceneObj)
+    Custom_AgentSetProperty("Kenny", "WDUseable - Action Enter Chore", kenny_wdusable_actionenter_chore, sceneObj)
+    Custom_AgentSetProperty("Kenny", "WDUseable - Action Exit Chore", kenny_wdusable_actionexit_chore, sceneObj)
+    Custom_AgentSetProperty("Kenny", "WDUseable - Action Use Chore", kenny_wdusable_actionuse_chore, sceneObj)
+    Custom_AgentSetProperty("Kenny", "Game Selectable", true, sceneObj)
+    Custom_AgentSetProperty("Kenny", "WDUseable - Use Activate On Look", true, sceneObj)
+
+    
+    local larry_prop = "sk54_larry.prop"
+    local larry = AgentCreate("Larry", larry_prop, Vector(-0.994738,0.085000,13.062927), Vector(0.000000,89.980743,0.000000), sceneObj, false, false)
+    local larry_idle_chore = "adv_motorInn102act1_larryFenceFixing.chore"
+    local larry_wdusable_actionenter_chore = ""
+    local larry_wdusable_actionexit_chore = ""
+    local larry_wdusable_actionuse_chore = "adv_drugstore_lillyLarryFloor.chore"
+    Custom_AgentSetProperty("Larry", "Walk Animation - Idle", larry_idle_chore, sceneObj)
+    Custom_AgentSetProperty("Larry", "WDUseable - Action Enter Chore", larry_wdusable_actionenter_chore, sceneObj)
+    Custom_AgentSetProperty("Larry", "WDUseable - Action Exit Chore", larry_wdusable_actionexit_chore, sceneObj)
+    Custom_AgentSetProperty("Larry", "WDUseable - Action Use Chore", larry_wdusable_actionuse_chore, sceneObj)
+    Custom_AgentSetProperty("Larry", "Game Selectable", true, sceneObj)
+    Custom_AgentSetProperty("Larry", "WDUseable - Use Activate On Look", true, sceneObj)
+
+    
+    local lilly_prop = "sk55_lilly.prop"
+    local lilly = AgentCreate("Lilly", lilly_prop, Vector(-10.615378,3.102963,-0.918274), Vector(-0.000000,29.220528,0.000000), sceneObj, false, false)
+    local lilly_idle_chore = "adv_motorInn102Act1_lillyRVRoof.chore"
+    local lilly_wdusable_actionenter_chore = ""
+    local lilly_wdusable_actionexit_chore = ""
+    local lilly_wdusable_actionuse_chore = "adv_drugstore_lillyLarryFloor.chore"
+    Custom_AgentSetProperty("Lilly", "Walk Animation - Idle", lilly_idle_chore, sceneObj)
+    Custom_AgentSetProperty("Lilly", "WDUseable - Action Enter Chore", lilly_wdusable_actionenter_chore, sceneObj)
+    Custom_AgentSetProperty("Lilly", "WDUseable - Action Exit Chore", lilly_wdusable_actionexit_chore, sceneObj)
+    Custom_AgentSetProperty("Lilly", "WDUseable - Action Use Chore", lilly_wdusable_actionuse_chore, sceneObj)
+    Custom_AgentSetProperty("Lilly", "Game Selectable", true, sceneObj)
+    Custom_AgentSetProperty("Lilly", "WDUseable - Use Activate On Look", true, sceneObj)
+    
+    
+    local mark_prop = "sk54_mark.prop"
+    local mark = AgentCreate("Mark", mark_prop, Vector(-1.085047,0.083000,11.975443), Vector(0.000000,68.658485,-0.000000), sceneObj, false, false)
+    local mark_idle_chore = "adv_motorInn102Act1_markFenceFixing.chore"
+    local mark_wdusable_actionenter_chore = ""
+    local mark_wdusable_actionexit_chore = ""
+    local mark_wdusable_actionuse_chore = "adv_motorInn102Act1_markFenceFixing.chore"
+    Custom_AgentSetProperty("Mark", "Walk Animation - Idle", mark_idle_chore, sceneObj)
+    Custom_AgentSetProperty("Mark", "WDUseable - Action Enter Chore", mark_wdusable_actionenter_chore, sceneObj)
+    Custom_AgentSetProperty("Mark", "WDUseable - Action Exit Chore", mark_wdusable_actionexit_chore, sceneObj)
+    Custom_AgentSetProperty("Mark", "WDUseable - Action Use Chore", mark_wdusable_actionuse_chore, sceneObj)
+    Custom_AgentSetProperty("Mark", "Game Selectable", true, sceneObj)
+    Custom_AgentSetProperty("Mark", "WDUseable - Use Activate On Look", true, sceneObj)
+    
+    
+    --local clemYoung_prop = "sk56_clementineAltDressHat.prop"
+    --local clemYoung = AgentCreate("ClementineYoung", clemYoung_prop, Vector(-12.182457,0.085000,3.238164), Vector(0.000000,-39.561508,0.000000), sceneObj, false, false)
+    --local clemYoung_idle_chore = "adv_motorInn_clementine_puppyEyes.chore"
+    --local clemYoung_wdusable_actionenter_chore = ""
+    --local clemYoung_wdusable_actionexit_chore = ""
+    --local clemYoung_wdusable_actionuse_chore = "adv_drugstore_lillyLarryFloor.chore"
+    --Custom_AgentSetProperty("ClementineYoung", "Walk Animation - Idle", clemYoung_idle_chore, sceneObj)
+    --Custom_AgentSetProperty("ClementineYoung", "WDUseable - Action Enter Chore", clemYoung_wdusable_actionenter_chore, sceneObj)
+    --Custom_AgentSetProperty("ClementineYoung", "WDUseable - Action Exit Chore", clemYoung_wdusable_actionexit_chore, sceneObj)
+    --Custom_AgentSetProperty("ClementineYoung", "WDUseable - Action Use Chore", clemYoung_wdusable_actionuse_chore, sceneObj)
+    --Custom_AgentSetProperty("ClementineYoung", "Game Selectable", true, sceneObj)
+    --Custom_AgentSetProperty("ClementineYoung", "WDUseable - Use Activate On Look", true, sceneObj)
+    
+
+    
+    Custom_AgentSetProperty("adv_trainStation.scene", "FX anti-aliasing", true, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "FX Sharp Shadows Enabled", true, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "Generate NPR Lines", false, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "Screen Space Lines - Enabled", false, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "FX Ambient Occlusion Enabled", true, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "FX Tonemap Intensity", 1.0, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "FX Tonemap White Point", 5.0, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "FX Tonemap Black Point", 0.001, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "FX Tonemap Filmic Toe Intensity", 1.0, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "FX Tonemap Filmic Shoulder Intensity", 0.75, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "HBAO Intensity", 2.5, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "HBAO Radius", 1.0, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "HBAO Max Radius Percent", 1.0, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "HBAO Max Distance", 300, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "HBAO Distance Falloff", 150, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "FX Bloom Threshold", -0.05, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "FX Bloom Intensity", 0.5, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "Ambient Color", RGBColor(0, 0, 0, 0), sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "Shadow Color", RGBColor(0, 0, 0, 0), sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "FX Vignette Tint Enabled", true, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "FX Vignette Tint", RGBColor(0, 0, 0, 0), sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "FX Vignette Falloff", 1.5, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "FX Vignette Center", 0, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "FX Vignette Corners", 3.0, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "LightEnv Saturation", 1.5, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "LightEnv Reflection Intensity Shadow", 1.0, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "Specular Multiplier Enabled", true, sceneObj)
+    
+    
+    
+    --configure enlighten data
+    local enlightenLevelData = "adv_motorInn102.enl"
+    local enlightenLevelProbeData = "adv_motorInn102.probe"
+    
+    local enlightenModule = "module_enlightensystem.prop"
+    local enlightenProbeModule = "module_lightprobe.prop"
+    
+    local enlighten_main      = AgentCreate("module_enlightensystem", enlightenModule, Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local enlighten_probe      = AgentCreate("module_lightprobe", enlightenProbeModule, Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    
+    --DevTools_AgentMenuTool_GetValidPropertyNames(enlighten_main)
+    --DevTools_AgentMenuTool_GetValidPropertyNames(enlighten_probe)
+    
+    Custom_AgentSetProperty("adv_trainStation.scene", "LightEnv Enabled", true, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "LightEnv Bake Enabled", false, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "LightEnv Probe Data", enlightenLevelProbeData, sceneObj)
+    
+    
+    --local cam = AgentFindInScene("cam_orbit", sceneObj)
+    Custom_AgentSetProperty("cam_orbit", "Scene: Location Info", nil, sceneObj)
+    Custom_AgentSetProperty("cam_orbit", "Orbit Cam - Collision with Environment Enable", false, sceneObj)
+
+    --PrintSceneLightsToTXT(sceneObj, "trainstation-lights.txt")
+    
+    SetPropertyOnAllCameras(sceneObj, "Field of View Scale", 1.5)
+    
+    --sound
+    CustomSound_Ambient_Setup("soundCustom_music", sceneObj)
+    local amb_mus_soundFile = "mus_loop_dialog_07.wav"
+    --local amb_mus_soundFile = "mus_linear_clementine_01.wav"
+    CustomSound_Ambient_SetProperties("soundCustom_music", amb_mus_soundFile, 5.0, 1.0, sceneObj)
+    CustomSound_Ambient_Play("soundCustom_music", 1.0, sceneObj)
+    
+    CustomSound_Ambient_Setup("soundCustom_ambient", sceneObj)
+    local amb_soundFile = "amb_motorInn_day.wav"
+    CustomSound_Ambient_SetProperties("soundCustom_ambient", amb_soundFile, 5.0, 1.0, sceneObj)
+    CustomSound_Ambient_Play("soundCustom_ambient", 1.0, sceneObj)
+end
+
+
+
+VirginiaUnderpass = function(sceneObj)
+    ResourceSetEnable("ProjectSeason3")
+    ResourceSetEnable("WalkingDead302")
+    
+    RemovingAgentsWithPrefix(sceneObj, "lightrig_")
+    RemovingAgentsWithPrefix(sceneObj, "light_CHAR")
+    RemovingAgentsWithPrefix(sceneObj, "lightrotation_CC")
+    --RemovingAgentsWithPrefix(sceneObj, "light_")
+    
+    --local motorinn102_wbox = "adv_motorInn102.wbox"
+    --SceneSetWalkBoxes(sceneObj, nil)
+    PropertyRemove(sceneObj, "Walk Boxes")
+    
+    --main scene meshes
+    local agent1 = AgentCreate("adv_virginiaUnderpass_meshesABuilding", "adv_virginiaUnderpass_meshesABuilding.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent2 = AgentCreate("adv_virginiaUnderpass_meshesAGrass", "adv_virginiaUnderpass_meshesAGrass.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent3 = AgentCreate("adv_virginiaUnderpass_meshesAIvy", "adv_virginiaUnderpass_meshesAIvy.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent4 = AgentCreate("adv_virginiaUnderpass_meshesAProps", "adv_virginiaUnderpass_meshesAProps.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent5 = AgentCreate("adv_virginiaUnderpass_meshesATerrain", "adv_virginiaUnderpass_meshesATerrain.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent6 = AgentCreate("adv_virginiaUnderpass_meshesATrees", "adv_virginiaUnderpass_meshesATrees.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent7 = AgentCreate("adv_virginiaUnderpass_meshesBBuilding", "adv_virginiaUnderpass_meshesBBuilding.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent8 = AgentCreate("adv_virginiaUnderpass_meshesBGrass", "adv_virginiaUnderpass_meshesBGrass.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent9 = AgentCreate("adv_virginiaUnderpass_meshesBIvy", "adv_virginiaUnderpass_meshesBIvy.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent10 = AgentCreate("adv_virginiaUnderpass_meshesBProps", "adv_virginiaUnderpass_meshesBProps.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent11 = AgentCreate("adv_virginiaUnderpass_meshesBTerrain", "adv_virginiaUnderpass_meshesBTerrain.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent12 = AgentCreate("adv_virginiaUnderpass_meshesBTrees", "adv_virginiaUnderpass_meshesBTrees.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent13 = AgentCreate("adv_virginiaUnderpass_meshesCBuilding", "adv_virginiaUnderpass_meshesCBuilding.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent14 = AgentCreate("adv_virginiaUnderpass_meshesCGrass", "adv_virginiaUnderpass_meshesCGrass.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent15 = AgentCreate("adv_virginiaUnderpass_meshesCIvy", "adv_virginiaUnderpass_meshesCIvy.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent16 = AgentCreate("adv_virginiaUnderpass_meshesCProps", "adv_virginiaUnderpass_meshesCProps.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent17 = AgentCreate("adv_virginiaUnderpass_meshesCTerrain", "adv_virginiaUnderpass_meshesCTerrain.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent18 = AgentCreate("adv_virginiaUnderpass_meshesCTreeCards", "adv_virginiaUnderpass_meshesCTreeCards.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent19 = AgentCreate("adv_virginiaUnderpass_meshesCTrees", "adv_virginiaUnderpass_meshesCTrees.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent20 = AgentCreate("adv_virginiaUnderpass_meshesDBuilding", "adv_virginiaUnderpass_meshesDBuilding.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent21 = AgentCreate("adv_virginiaUnderpass_meshesDGrass", "adv_virginiaUnderpass_meshesDGrass.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent22 = AgentCreate("adv_virginiaUnderpass_meshesDInterior", "adv_virginiaUnderpass_meshesDInterior.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent23 = AgentCreate("adv_virginiaUnderpass_meshesDIvy", "adv_virginiaUnderpass_meshesDIvy.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent24 = AgentCreate("adv_virginiaUnderpass_meshesDProps", "adv_virginiaUnderpass_meshesDProps.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent25 = AgentCreate("adv_virginiaUnderpass_meshesDTerrain", "adv_virginiaUnderpass_meshesDTerrain.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent26 = AgentCreate("adv_virginiaUnderpass_meshesDTrees", "adv_virginiaUnderpass_meshesDTrees.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent27 = AgentCreate("adv_virginiaUnderpass_meshesEBuilding", "adv_virginiaUnderpass_meshesEBuilding.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent28 = AgentCreate("adv_virginiaUnderpass_meshesEGrass", "adv_virginiaUnderpass_meshesEGrass.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent29 = AgentCreate("adv_virginiaUnderpass_meshesEProps", "adv_virginiaUnderpass_meshesEProps.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent30 = AgentCreate("adv_virginiaUnderpass_meshesETerrain", "adv_virginiaUnderpass_meshesETerrain.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent31 = AgentCreate("adv_virginiaUnderpass_meshesETrees", "adv_virginiaUnderpass_meshesETrees.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent32 = AgentCreate("adv_virginiaUnderpass_meshesFBridge", "adv_virginiaUnderpass_meshesFBridge.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent33 = AgentCreate("adv_virginiaUnderpass_meshesFGrass", "adv_virginiaUnderpass_meshesFGrass.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent34 = AgentCreate("adv_virginiaUnderpass_meshesFIvy", "adv_virginiaUnderpass_meshesFIvy.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent35 = AgentCreate("adv_virginiaUnderpass_meshesFProps", "adv_virginiaUnderpass_meshesFProps.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent36 = AgentCreate("adv_virginiaUnderpass_meshesFTerrain", "adv_virginiaUnderpass_meshesFTerrain.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent37 = AgentCreate("adv_virginiaUnderpass_meshesGGrass", "adv_virginiaUnderpass_meshesGGrass.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent38 = AgentCreate("adv_virginiaUnderpass_meshesGTerrain", "adv_virginiaUnderpass_meshesGTerrain.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent39 = AgentCreate("adv_virginiaUnderpass_meshesGTrees", "adv_virginiaUnderpass_meshesGTrees.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent40 = AgentCreate("adv_virginiaUnderpass_meshesHGrass", "adv_virginiaUnderpass_meshesHGrass.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent41 = AgentCreate("adv_virginiaUnderpass_meshesHTerrain", "adv_virginiaUnderpass_meshesHTerrain.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent42 = AgentCreate("adv_virginiaUnderpass_meshesHTrees", "adv_virginiaUnderpass_meshesHTrees.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent43 = AgentCreate("adv_virginiaUnderpass_meshesIGrass", "adv_virginiaUnderpass_meshesIGrass.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent44 = AgentCreate("adv_virginiaUnderpass_meshesITerrain", "adv_virginiaUnderpass_meshesITerrain.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent45 = AgentCreate("adv_virginiaUnderpass_meshesITreeCards", "adv_virginiaUnderpass_meshesITreeCards.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent46 = AgentCreate("adv_virginiaUnderpass_meshesITrees", "adv_virginiaUnderpass_meshesITrees.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent47 = AgentCreate("adv_virginiaUnderpass_meshesJGrass", "adv_virginiaUnderpass_meshesJGrass.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent48 = AgentCreate("adv_virginiaUnderpass_meshesJTerrain", "adv_virginiaUnderpass_meshesJTerrain.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent49 = AgentCreate("adv_virginiaUnderpass_meshesJTreeCards", "adv_virginiaUnderpass_meshesJTreeCards.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent50 = AgentCreate("adv_virginiaUnderpass_meshesJTrees", "adv_virginiaUnderpass_meshesJTrees.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent51 = AgentCreate("adv_virginiaUnderpass_meshesEIvy", "adv_virginiaUnderpass_meshesEIvy.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent52 = AgentCreate("adv_virginiaUnderpass_meshesFTrees", "adv_virginiaUnderpass_meshesFTrees.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent53 = AgentCreate("adv_virginiaUnderpass_meshesGTerrainA", "adv_virginiaUnderpass_meshesGTerrainA.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent54 = AgentCreate("adv_virginiaUnderpass_meshesGTerrainB", "adv_virginiaUnderpass_meshesGTerrainB.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent55 = AgentCreate("adv_virginiaUnderpass_meshesGTerrainC", "adv_virginiaUnderpass_meshesGTerrainC.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent56 = AgentCreate("adv_virginiaUnderpass_meshesGTerrainD", "adv_virginiaUnderpass_meshesGTerrainD.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent57 = AgentCreate("adv_virginiaUnderpass_meshesHTerrainA", "adv_virginiaUnderpass_meshesHTerrainA.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent58 = AgentCreate("adv_virginiaUnderpass_meshesHTerrainB", "adv_virginiaUnderpass_meshesHTerrainB.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent59 = AgentCreate("adv_virginiaUnderpass_meshesHTerrainC", "adv_virginiaUnderpass_meshesHTerrainC.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent60 = AgentCreate("adv_virginiaUnderpass_meshesHTerrainD", "adv_virginiaUnderpass_meshesHTerrainD.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent61 = AgentCreate("adv_virginiaUnderpass_meshesAPuddles", "adv_virginiaUnderpass_meshesAPuddles.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent62 = AgentCreate("adv_virginiaUnderpass_meshesBPuddles", "adv_virginiaUnderpass_meshesBPuddles.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent63 = AgentCreate("adv_virginiaUnderpass_meshesCPuddles", "adv_virginiaUnderpass_meshesCPuddles.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent64 = AgentCreate("adv_virginiaUnderpass_meshesEPuddles", "adv_virginiaUnderpass_meshesEPuddles.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent65 = AgentCreate("adv_virginiaUnderpass_meshesFPuddles", "adv_virginiaUnderpass_meshesFPuddles.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+
+    
+    local sceneLightRef  = AgentFindInScene("light_ENV_exterior_ambFill", sceneObj)
+    local sceneLightRef_props = AgentGetRuntimeProperties(sceneLightRef)
+    
+    local envlight_groupEnabled = PropertyGet(sceneLightRef_props, "EnvLight - Enabled Group")
+    local envlight_groups = PropertyGet(sceneLightRef_props, "EnvLight - Groups")
+    local envlight_shadowtype = 2
+    local envlight_shadowquality = 2
+    local envlight_hbaoParticipation = 1 --0 being ambient, 1 being direct
+    local envlight_materIntensity = 0.0
+    local envlight_prop = "module_env_light.prop"
+
+    --RemovingAgentsWithPrefix(sceneObj, "light_")
+    
+    local sunColor     = RGBColor(255, 230, 198, 255) --RGBColor(255, 245, 227, 255)
+    local ambientColor = RGBColor(108, 170, 225, 255) 
+    local skyColor     = RGBColor(24, 99, 205, 255)
+    local fogColor     = Desaturate_RGBColor(skyColor, 0.45)
+    skyColor = Desaturate_RGBColor(skyColor, 0.3)
+    
+    local light1 = AgentCreate("light_ENV_Sun", envlight_prop, Vector(0,0,0), Vector(100, -22, 40), sceneObj, false, false)
+    Custom_AgentSetProperty("light_ENV_Sun", "EnvLight - Type", 2, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Sun", "EnvLight - Intensity", 6 + envlight_materIntensity, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Sun", "EnvLight - Radius", 1, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Sun", "EnvLight - Distance Falloff", 1, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Sun", "EnvLight - Spot Angle Inner", 5, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Sun", "EnvLight - Spot Angle Outer", 45, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Sun", "EnvLight - Color", sunColor, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Sun", "EnvLight - Enabled Group", envlight_groupEnabled, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Sun", "EnvLight - Groups", envlight_groups, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Sun", "EnvLight - Shadow Type", 3, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Sun", "EnvLight - Wrap", 0.1, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Sun", "EnvLight - Shadow Quality", envlight_shadowquality, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Sun", "EnvLight - HBAO Participation Type", envlight_hbaoParticipation, sceneObj)
+    
+    local light2 = AgentCreate("light_ENV_A_2", envlight_prop, Vector(0.316396,1.283947,-1.390468), Vector(90,0,0), sceneObj, false, false)
+    Custom_AgentSetProperty("light_ENV_A_2", "EnvLight - Type", 3, sceneObj)
+    Custom_AgentSetProperty("light_ENV_A_2", "EnvLight - Intensity", 0.35 + envlight_materIntensity, sceneObj)
+    Custom_AgentSetProperty("light_ENV_A_2", "EnvLight - Radius", 1, sceneObj)
+    Custom_AgentSetProperty("light_ENV_A_2", "EnvLight - Distance Falloff", 1, sceneObj)
+    Custom_AgentSetProperty("light_ENV_A_2", "EnvLight - Spot Angle Inner", 5, sceneObj)
+    Custom_AgentSetProperty("light_ENV_A_2", "EnvLight - Spot Angle Outer", 45, sceneObj)
+    Custom_AgentSetProperty("light_ENV_A_2", "EnvLight - Color", ambientColor, sceneObj)
+    Custom_AgentSetProperty("light_ENV_A_2", "EnvLight - Enabled Group", envlight_groupEnabled, sceneObj)
+    Custom_AgentSetProperty("light_ENV_A_2", "EnvLight - Groups", envlight_groups, sceneObj)
+    Custom_AgentSetProperty("light_ENV_A_2", "EnvLight - Shadow Type", envlight_shadowtype, sceneObj)
+    Custom_AgentSetProperty("light_ENV_A_2", "EnvLight - Shadow Quality", envlight_shadowquality, sceneObj)
+    Custom_AgentSetProperty("light_ENV_A_2", "EnvLight - HBAO Participation Type", envlight_hbaoParticipation, sceneObj)
+    
+    local light3 = AgentCreate("light_ENV_Skylight", envlight_prop, Vector(0,0,0), Vector(90, 0, 0), sceneObj, false, false)
+    Custom_AgentSetProperty("light_ENV_Skylight", "EnvLight - Type", 4, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Skylight", "EnvLight - Intensity", 1, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Skylight", "EnvLight - Radius", 1, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Skylight", "EnvLight - Distance Falloff", 1, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Skylight", "EnvLight - Spot Angle Inner", 5, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Skylight", "EnvLight - Spot Angle Outer", 45, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Skylight", "EnvLight - Color", skyColor, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Skylight", "EnvLight - Enabled Group", envlight_groupEnabled, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Skylight", "EnvLight - Groups", envlight_groups, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Skylight", "EnvLight - Shadow Type", 2, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Skylight", "EnvLight - Shadow Quality", envlight_shadowquality, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Skylight", "EnvLight - HBAO Participation Type", envlight_hbaoParticipation, sceneObj)
+    
+    destroyMe(sceneLightRef)
+    
+    
+    Custom_AgentSetProperty("adv_trainStation.scene", "FX anti-aliasing", true, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "FX Sharp Shadows Enabled", true, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "Generate NPR Lines", false, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "Screen Space Lines - Enabled", false, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "FX Ambient Occlusion Enabled", true, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "FX Tonemap Intensity", 1.0, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "FX Tonemap White Point", 5.0, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "FX Tonemap Black Point", 0.001, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "FX Tonemap Filmic Toe Intensity", 1.0, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "FX Tonemap Filmic Shoulder Intensity", 0.75, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "HBAO Intensity", 2.5, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "HBAO Radius", 1.0, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "HBAO Max Radius Percent", 1.0, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "HBAO Max Distance", 300, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "HBAO Distance Falloff", 150, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "FX Bloom Threshold", -0.05, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "FX Bloom Intensity", 0.5, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "Ambient Color", RGBColor(0, 0, 0, 0), sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "Shadow Color", RGBColor(0, 0, 0, 0), sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "FX Vignette Tint Enabled", true, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "FX Vignette Tint", RGBColor(0, 0, 0, 0), sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "FX Vignette Falloff", 1.5, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "FX Vignette Center", 0, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "FX Vignette Corners", 3.0, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "LightEnv Saturation", 1.5, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "LightEnv Reflection Intensity Shadow", 1.0, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "Specular Multiplier Enabled", true, sceneObj)
+    
+    
+    
+    --local cam = AgentFindInScene("cam_orbit", sceneObj)
+    Custom_AgentSetProperty("cam_orbit", "Scene: Location Info", nil, sceneObj)
+    Custom_AgentSetProperty("cam_orbit", "Orbit Cam - Collision with Environment Enable", false, sceneObj)
+
+    --PrintSceneLightsToTXT(sceneObj, "trainstation-lights.txt")
+    
+    SetPropertyOnAllCameras(sceneObj, "Field of View Scale", 1.5)
+    
+    --sound
+    --CustomSound_Ambient_Setup("soundCustom_ambient", sceneObj)
+    --local amb_soundFile = "amb_ext_dairynight_rain_fight.wav"
+    --CustomSound_Ambient_SetProperties("soundCustom_ambient", amb_soundFile, 5.0, 1.0, sceneObj)
+    --CustomSound_Ambient_Play("soundCustom_ambient", 1.0, sceneObj)
+end
+
+BoardingSchool = function(sceneObj)
+    RemovingAgentsWithPrefix(sceneObj, "lightrig_")
+    RemovingAgentsWithPrefix(sceneObj, "light_CHAR")
+    RemovingAgentsWithPrefix(sceneObj, "lightrotation_CC")
+    --RemovingAgentsWithPrefix(sceneObj, "light_")
+    
+    --local motorinn102_wbox = "adv_motorInn102.wbox"
+    --SceneSetWalkBoxes(sceneObj, nil)
+    PropertyRemove(sceneObj, "Walk Boxes")
+    
+    --main scene meshes
+    local agent1 = AgentCreate("adv_boardingSchoolExterior_meshesABuilding", "adv_boardingSchoolExterior_meshesABuilding.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent2 = AgentCreate("adv_boardingSchoolExterior_meshesATreeFlats", "adv_boardingSchoolExterior_meshesATreeFlats.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent3 = AgentCreate("adv_boardingSchoolExterior_meshesBBuilding", "adv_boardingSchoolExterior_meshesBBuilding.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent4 = AgentCreate("adv_boardingSchoolExterior_meshesCBuilding", "adv_boardingSchoolExterior_meshesCBuilding.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent5 = AgentCreate("adv_boardingSchoolExterior_meshesDBuilding", "adv_boardingSchoolExterior_meshesDBuilding.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent6 = AgentCreate("adv_boardingSchoolExterior_meshesAGrass", "adv_boardingSchoolExterior_meshesAGrass.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent7 = AgentCreate("adv_boardingSchoolExterior_meshesAShrubs", "adv_boardingSchoolExterior_meshesAShrubs.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent8 = AgentCreate("adv_boardingSchoolExterior_meshesATrees", "adv_boardingSchoolExterior_meshesATrees.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent9 = AgentCreate("adv_boardingSchoolExterior_meshesBTrees", "adv_boardingSchoolExterior_meshesBTrees.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent10 = AgentCreate("adv_boardingSchoolExterior_meshesCTrees", "adv_boardingSchoolExterior_meshesCTrees.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent11 = AgentCreate("adv_boardingSchoolExterior_meshesABuildingBackground", "adv_boardingSchoolExterior_meshesABuildingBackground.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent12 = AgentCreate("adv_boardingSchoolExterior_meshesARocks", "adv_boardingSchoolExterior_meshesARocks.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent13 = AgentCreate("adv_boardingSchoolExterior_meshesATreeBackground", "adv_boardingSchoolExterior_meshesATreeBackground.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent14 = AgentCreate("adv_boardingSchoolExterior_meshesBBuildingBackground", "adv_boardingSchoolExterior_meshesBBuildingBackground.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent15 = AgentCreate("adv_boardingSchoolExterior_meshesBGrass", "adv_boardingSchoolExterior_meshesBGrass.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent16 = AgentCreate("adv_boardingSchoolExterior_meshesBRocks", "adv_boardingSchoolExterior_meshesBRocks.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent17 = AgentCreate("adv_boardingSchoolExterior_meshesBShrubs", "adv_boardingSchoolExterior_meshesBShrubs.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent18 = AgentCreate("adv_boardingSchoolExterior_meshesBTreeBackground", "adv_boardingSchoolExterior_meshesBTreeBackground.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent19 = AgentCreate("adv_boardingSchoolExterior_meshesCGrass", "adv_boardingSchoolExterior_meshesCGrass.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent20 = AgentCreate("adv_boardingSchoolExterior_meshesCRocks", "adv_boardingSchoolExterior_meshesCRocks.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent21 = AgentCreate("adv_boardingSchoolExterior_meshesCShrubs", "adv_boardingSchoolExterior_meshesCShrubs.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent22 = AgentCreate("adv_boardingSchoolExterior_meshesCTreeBackground", "adv_boardingSchoolExterior_meshesCTreeBackground.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent23 = AgentCreate("adv_boardingSchoolExterior_meshesDGrass", "adv_boardingSchoolExterior_meshesDGrass.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent24 = AgentCreate("adv_boardingSchoolExterior_meshesDRocks", "adv_boardingSchoolExterior_meshesDRocks.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent25 = AgentCreate("adv_boardingSchoolExterior_meshesDShrubs", "adv_boardingSchoolExterior_meshesDShrubs.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent26 = AgentCreate("adv_boardingSchoolExterior_meshesDTreeBackground", "adv_boardingSchoolExterior_meshesDTreeBackground.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent27 = AgentCreate("adv_boardingSchoolExterior_meshesDTrees", "adv_boardingSchoolExterior_meshesDTrees.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent28 = AgentCreate("adv_boardingSchoolExterior_meshesATerrain", "adv_boardingSchoolExterior_meshesATerrain.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent29 = AgentCreate("adv_boardingSchoolExterior_meshesDGate", "adv_boardingSchoolExterior_meshesDGate.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent30 = AgentCreate("adv_boardingSchoolExterior_meshesABuildingFront", "adv_boardingSchoolExterior_meshesABuildingFront.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent31 = AgentCreate("adv_boardingSchoolExterior_meshesABuildingLeft", "adv_boardingSchoolExterior_meshesABuildingLeft.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent32 = AgentCreate("adv_boardingSchoolExterior_meshesABuildingIvy", "adv_boardingSchoolExterior_meshesABuildingIvy.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent33 = AgentCreate("adv_boardingSchoolExterior_meshesBBuildingIvy", "adv_boardingSchoolExterior_meshesBBuildingIvy.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent34 = AgentCreate("adv_boardingSchoolExterior_meshesCBuildingIvy", "adv_boardingSchoolExterior_meshesCBuildingIvy.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent35 = AgentCreate("adv_boardingSchoolExterior_meshesATerrainClutter", "adv_boardingSchoolExterior_meshesATerrainClutter.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent36 = AgentCreate("adv_boardingSchoolExterior_meshesBTerrainClutter", "adv_boardingSchoolExterior_meshesBTerrainClutter.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent37 = AgentCreate("adv_boardingSchoolExterior_meshesCTerrainClutter", "adv_boardingSchoolExterior_meshesCTerrainClutter.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent38 = AgentCreate("adv_boardingSchoolExterior_meshesDTerrainClutter", "adv_boardingSchoolExterior_meshesDTerrainClutter.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent39 = AgentCreate("adv_boardingSchoolExterior_meshesDIvy", "adv_boardingSchoolExterior_meshesDIvy.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent40 = AgentCreate("adv_boardingSchoolExterior_meshesAIvy", "adv_boardingSchoolExterior_meshesAIvy.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent41 = AgentCreate("adv_boardingSchoolExterior_meshesAGrassGraveyard", "adv_boardingSchoolExterior_meshesAGrassGraveyard.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+
+    
+    local sceneLightRef  = AgentFindInScene("light_ENV_exterior_ambFill", sceneObj)
+    local sceneLightRef_props = AgentGetRuntimeProperties(sceneLightRef)
+    
+    local envlight_groupEnabled = PropertyGet(sceneLightRef_props, "EnvLight - Enabled Group")
+    local envlight_groups = PropertyGet(sceneLightRef_props, "EnvLight - Groups")
+    local envlight_shadowtype = 2
+    local envlight_shadowquality = 2
+    local envlight_hbaoParticipation = 1 --0 being ambient, 1 being direct
+    local envlight_materIntensity = 0.0
+    local envlight_prop = "module_env_light.prop"
+
+    --RemovingAgentsWithPrefix(sceneObj, "light_")
+    
+    local sunColor     = RGBColor(255, 230, 198, 255) --RGBColor(255, 245, 227, 255)
+    local ambientColor = RGBColor(108, 170, 225, 255) 
+    local skyColor     = RGBColor(24, 99, 205, 255)
+    local fogColor     = Desaturate_RGBColor(skyColor, 0.45)
+    skyColor = Desaturate_RGBColor(skyColor, 0.3)
+    
+    local light1 = AgentCreate("light_ENV_Sun", envlight_prop, Vector(0,0,0), Vector(100, -22, 40), sceneObj, false, false)
+    Custom_AgentSetProperty("light_ENV_Sun", "EnvLight - Type", 2, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Sun", "EnvLight - Intensity", 6 + envlight_materIntensity, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Sun", "EnvLight - Radius", 1, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Sun", "EnvLight - Distance Falloff", 1, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Sun", "EnvLight - Spot Angle Inner", 5, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Sun", "EnvLight - Spot Angle Outer", 45, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Sun", "EnvLight - Color", sunColor, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Sun", "EnvLight - Enabled Group", envlight_groupEnabled, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Sun", "EnvLight - Groups", envlight_groups, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Sun", "EnvLight - Shadow Type", 3, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Sun", "EnvLight - Wrap", 0.1, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Sun", "EnvLight - Shadow Quality", envlight_shadowquality, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Sun", "EnvLight - HBAO Participation Type", envlight_hbaoParticipation, sceneObj)
+    
+    local light2 = AgentCreate("light_ENV_A_2", envlight_prop, Vector(0.316396,1.283947,-1.390468), Vector(90,0,0), sceneObj, false, false)
+    Custom_AgentSetProperty("light_ENV_A_2", "EnvLight - Type", 3, sceneObj)
+    Custom_AgentSetProperty("light_ENV_A_2", "EnvLight - Intensity", 0.35 + envlight_materIntensity, sceneObj)
+    Custom_AgentSetProperty("light_ENV_A_2", "EnvLight - Radius", 1, sceneObj)
+    Custom_AgentSetProperty("light_ENV_A_2", "EnvLight - Distance Falloff", 1, sceneObj)
+    Custom_AgentSetProperty("light_ENV_A_2", "EnvLight - Spot Angle Inner", 5, sceneObj)
+    Custom_AgentSetProperty("light_ENV_A_2", "EnvLight - Spot Angle Outer", 45, sceneObj)
+    Custom_AgentSetProperty("light_ENV_A_2", "EnvLight - Color", ambientColor, sceneObj)
+    Custom_AgentSetProperty("light_ENV_A_2", "EnvLight - Enabled Group", envlight_groupEnabled, sceneObj)
+    Custom_AgentSetProperty("light_ENV_A_2", "EnvLight - Groups", envlight_groups, sceneObj)
+    Custom_AgentSetProperty("light_ENV_A_2", "EnvLight - Shadow Type", envlight_shadowtype, sceneObj)
+    Custom_AgentSetProperty("light_ENV_A_2", "EnvLight - Shadow Quality", envlight_shadowquality, sceneObj)
+    Custom_AgentSetProperty("light_ENV_A_2", "EnvLight - HBAO Participation Type", envlight_hbaoParticipation, sceneObj)
+    
+    local light3 = AgentCreate("light_ENV_Skylight", envlight_prop, Vector(0,0,0), Vector(90, 0, 0), sceneObj, false, false)
+    Custom_AgentSetProperty("light_ENV_Skylight", "EnvLight - Type", 4, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Skylight", "EnvLight - Intensity", 1, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Skylight", "EnvLight - Radius", 1, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Skylight", "EnvLight - Distance Falloff", 1, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Skylight", "EnvLight - Spot Angle Inner", 5, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Skylight", "EnvLight - Spot Angle Outer", 45, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Skylight", "EnvLight - Color", skyColor, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Skylight", "EnvLight - Enabled Group", envlight_groupEnabled, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Skylight", "EnvLight - Groups", envlight_groups, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Skylight", "EnvLight - Shadow Type", 2, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Skylight", "EnvLight - Shadow Quality", envlight_shadowquality, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Skylight", "EnvLight - HBAO Participation Type", envlight_hbaoParticipation, sceneObj)
+    
+    destroyMe(sceneLightRef)
+    
+    
+    Custom_AgentSetProperty("adv_trainStation.scene", "FX anti-aliasing", true, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "FX Sharp Shadows Enabled", true, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "Generate NPR Lines", false, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "Screen Space Lines - Enabled", false, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "FX Ambient Occlusion Enabled", true, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "FX Tonemap Intensity", 1.0, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "FX Tonemap White Point", 5.0, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "FX Tonemap Black Point", 0.001, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "FX Tonemap Filmic Toe Intensity", 1.0, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "FX Tonemap Filmic Shoulder Intensity", 0.75, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "HBAO Intensity", 2.5, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "HBAO Radius", 1.0, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "HBAO Max Radius Percent", 1.0, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "HBAO Max Distance", 300, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "HBAO Distance Falloff", 150, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "FX Bloom Threshold", -0.05, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "FX Bloom Intensity", 0.5, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "Ambient Color", RGBColor(0, 0, 0, 0), sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "Shadow Color", RGBColor(0, 0, 0, 0), sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "FX Vignette Tint Enabled", true, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "FX Vignette Tint", RGBColor(0, 0, 0, 0), sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "FX Vignette Falloff", 1.5, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "FX Vignette Center", 0, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "FX Vignette Corners", 3.0, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "LightEnv Saturation", 1.5, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "LightEnv Reflection Intensity Shadow", 1.0, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "Specular Multiplier Enabled", true, sceneObj)
+    
+    
+    
+    --local cam = AgentFindInScene("cam_orbit", sceneObj)
+    Custom_AgentSetProperty("cam_orbit", "Scene: Location Info", nil, sceneObj)
+    Custom_AgentSetProperty("cam_orbit", "Orbit Cam - Collision with Environment Enable", false, sceneObj)
+
+    --PrintSceneLightsToTXT(sceneObj, "trainstation-lights.txt")
+    
+    SetPropertyOnAllCameras(sceneObj, "Field of View Scale", 1.5)
+    
+    
+    ResourceSetEnable("ProjectSeason1")
+    ResourceSetEnable("WalkingDead101")
+    
+    --sound
+    CustomSound_Ambient_Setup("soundCustom_ambient", sceneObj)
+    local amb_soundFile = "amb_motorInn_day.wav"
+    CustomSound_Ambient_SetProperties("soundCustom_ambient", amb_soundFile, 5.0, 1.0, sceneObj)
+    CustomSound_Ambient_Play("soundCustom_ambient", 1.0, sceneObj)
+end
+
+LodgeExteriorRear = function(sceneObj)
+    ResourceSetEnable("ProjectSeason2")
+    ResourceSetEnable("WalkingDead202")
+    RemovingAgentsWithPrefix(sceneObj, "lightrig_")
+    RemovingAgentsWithPrefix(sceneObj, "light_CHAR")
+    RemovingAgentsWithPrefix(sceneObj, "lightrotation_CC")
+    --RemovingAgentsWithPrefix(sceneObj, "light_")
+    
+    --local motorinn102_wbox = "adv_motorInn102.wbox"
+    --SceneSetWalkBoxes(sceneObj, nil)
+    PropertyRemove(sceneObj, "Walk Boxes")
+    
+    --main scene meshes
+    local agent1 = AgentCreate("adv_lodgeExteriorRear_meshesA", "adv_lodgeExteriorRear_meshesA.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent2 = AgentCreate("adv_lodgeExteriorRear_meshesB", "adv_lodgeExteriorRear_meshesB.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent3 = AgentCreate("adv_lodgeExteriorRear_meshesD", "adv_lodgeExteriorRear_meshesD.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent4 = AgentCreate("adv_lodgeExteriorRear_meshesC", "adv_lodgeExteriorRear_meshesC.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent5 = AgentCreate("adv_lodgeExteriorRear_meshesAFoliageBrush", "adv_lodgeExteriorRear_meshesAFoliageBrush.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent6 = AgentCreate("adv_lodgeExteriorRear_meshesAFoliageGrass", "adv_lodgeExteriorRear_meshesAFoliageGrass.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent7 = AgentCreate("adv_lodgeExteriorRear_meshesAFoliageTrees", "adv_lodgeExteriorRear_meshesAFoliageTrees.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent8 = AgentCreate("adv_lodgeExteriorRear_meshesBFoliageTrees", "adv_lodgeExteriorRear_meshesBFoliageTrees.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent9 = AgentCreate("adv_lodgeExteriorRear_meshesE", "adv_lodgeExteriorRear_meshesE.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent10 = AgentCreate("adv_lodgeExteriorRear_meshesBFoliageGrass", "adv_lodgeExteriorRear_meshesBFoliageGrass.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent11 = AgentCreate("adv_lodgeExteriorRear_meshesF", "adv_lodgeExteriorRear_meshesF.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    local agent12 = AgentCreate("adv_lodgeExteriorRear_meshesA_decals", "adv_lodgeExteriorRear_meshesA_decals.prop", Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    
+    local sceneLightRef  = AgentFindInScene("light_ENV_exterior_ambFill", sceneObj)
+    local sceneLightRef_props = AgentGetRuntimeProperties(sceneLightRef)
+    
+    local envlight_groupEnabled = PropertyGet(sceneLightRef_props, "EnvLight - Enabled Group")
+    local envlight_groups = PropertyGet(sceneLightRef_props, "EnvLight - Groups")
+    local envlight_shadowtype = 2
+    local envlight_shadowquality = 2
+    local envlight_hbaoParticipation = 1 --0 being ambient, 1 being direct
+    local envlight_materIntensity = 0.0
+    local envlight_prop = "module_env_light.prop"
+
+    --RemovingAgentsWithPrefix(sceneObj, "light_")
+    
+    local sunColor     = RGBColor(255, 230, 198, 255) --RGBColor(255, 245, 227, 255)
+    local ambientColor = RGBColor(108, 170, 225, 255) 
+    local skyColor     = RGBColor(24, 99, 205, 255)
+    local fogColor     = Desaturate_RGBColor(skyColor, 0.45)
+    skyColor = Desaturate_RGBColor(skyColor, 0.3)
+    
+    local light1 = AgentCreate("light_ENV_Sun", envlight_prop, Vector(0,0,0), Vector(100, -22, 40), sceneObj, false, false)
+    Custom_AgentSetProperty("light_ENV_Sun", "EnvLight - Type", 2, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Sun", "EnvLight - Intensity", 6 + envlight_materIntensity, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Sun", "EnvLight - Radius", 1, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Sun", "EnvLight - Distance Falloff", 1, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Sun", "EnvLight - Spot Angle Inner", 5, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Sun", "EnvLight - Spot Angle Outer", 45, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Sun", "EnvLight - Color", sunColor, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Sun", "EnvLight - Enabled Group", envlight_groupEnabled, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Sun", "EnvLight - Groups", envlight_groups, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Sun", "EnvLight - Shadow Type", 3, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Sun", "EnvLight - Wrap", 0.1, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Sun", "EnvLight - Shadow Quality", envlight_shadowquality, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Sun", "EnvLight - HBAO Participation Type", envlight_hbaoParticipation, sceneObj)
+    
+    local light2 = AgentCreate("light_ENV_A_2", envlight_prop, Vector(0.316396,1.283947,-1.390468), Vector(90,0,0), sceneObj, false, false)
+    Custom_AgentSetProperty("light_ENV_A_2", "EnvLight - Type", 3, sceneObj)
+    Custom_AgentSetProperty("light_ENV_A_2", "EnvLight - Intensity", 0.35 + envlight_materIntensity, sceneObj)
+    Custom_AgentSetProperty("light_ENV_A_2", "EnvLight - Radius", 1, sceneObj)
+    Custom_AgentSetProperty("light_ENV_A_2", "EnvLight - Distance Falloff", 1, sceneObj)
+    Custom_AgentSetProperty("light_ENV_A_2", "EnvLight - Spot Angle Inner", 5, sceneObj)
+    Custom_AgentSetProperty("light_ENV_A_2", "EnvLight - Spot Angle Outer", 45, sceneObj)
+    Custom_AgentSetProperty("light_ENV_A_2", "EnvLight - Color", ambientColor, sceneObj)
+    Custom_AgentSetProperty("light_ENV_A_2", "EnvLight - Enabled Group", envlight_groupEnabled, sceneObj)
+    Custom_AgentSetProperty("light_ENV_A_2", "EnvLight - Groups", envlight_groups, sceneObj)
+    Custom_AgentSetProperty("light_ENV_A_2", "EnvLight - Shadow Type", envlight_shadowtype, sceneObj)
+    Custom_AgentSetProperty("light_ENV_A_2", "EnvLight - Shadow Quality", envlight_shadowquality, sceneObj)
+    Custom_AgentSetProperty("light_ENV_A_2", "EnvLight - HBAO Participation Type", envlight_hbaoParticipation, sceneObj)
+    
+    local light3 = AgentCreate("light_ENV_Skylight", envlight_prop, Vector(0,0,0), Vector(90, 0, 0), sceneObj, false, false)
+    Custom_AgentSetProperty("light_ENV_Skylight", "EnvLight - Type", 4, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Skylight", "EnvLight - Intensity", 1, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Skylight", "EnvLight - Radius", 1, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Skylight", "EnvLight - Distance Falloff", 1, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Skylight", "EnvLight - Spot Angle Inner", 5, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Skylight", "EnvLight - Spot Angle Outer", 45, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Skylight", "EnvLight - Color", skyColor, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Skylight", "EnvLight - Enabled Group", envlight_groupEnabled, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Skylight", "EnvLight - Groups", envlight_groups, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Skylight", "EnvLight - Shadow Type", 2, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Skylight", "EnvLight - Shadow Quality", envlight_shadowquality, sceneObj)
+    Custom_AgentSetProperty("light_ENV_Skylight", "EnvLight - HBAO Participation Type", envlight_hbaoParticipation, sceneObj)
+    
+    destroyMe(sceneLightRef)
+    
+    
+    Custom_AgentSetProperty("adv_trainStation.scene", "FX anti-aliasing", true, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "FX Sharp Shadows Enabled", true, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "Generate NPR Lines", false, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "Screen Space Lines - Enabled", false, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "FX Ambient Occlusion Enabled", true, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "FX Tonemap Intensity", 1.0, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "FX Tonemap White Point", 5.0, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "FX Tonemap Black Point", 0.001, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "FX Tonemap Filmic Toe Intensity", 1.0, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "FX Tonemap Filmic Shoulder Intensity", 0.75, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "HBAO Intensity", 2.5, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "HBAO Radius", 1.0, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "HBAO Max Radius Percent", 1.0, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "HBAO Max Distance", 300, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "HBAO Distance Falloff", 150, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "FX Bloom Threshold", -0.05, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "FX Bloom Intensity", 0.5, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "Ambient Color", RGBColor(0, 0, 0, 0), sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "Shadow Color", RGBColor(0, 0, 0, 0), sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "FX Vignette Tint Enabled", true, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "FX Vignette Tint", RGBColor(0, 0, 0, 0), sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "FX Vignette Falloff", 1.5, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "FX Vignette Center", 0, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "FX Vignette Corners", 3.0, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "LightEnv Saturation", 1.5, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "LightEnv Reflection Intensity Shadow", 1.0, sceneObj)
+    Custom_AgentSetProperty("adv_trainStation.scene", "Specular Multiplier Enabled", true, sceneObj)
+    
+    
+    
+    --local cam = AgentFindInScene("cam_orbit", sceneObj)
+    Custom_AgentSetProperty("cam_orbit", "Scene: Location Info", nil, sceneObj)
+    Custom_AgentSetProperty("cam_orbit", "Orbit Cam - Collision with Environment Enable", false, sceneObj)
+
+    --PrintSceneLightsToTXT(sceneObj, "trainstation-lights.txt")
+    
+    SetPropertyOnAllCameras(sceneObj, "Field of View Scale", 1.5)
+    
+    
+    --ResourceSetEnable("ProjectSeason1")
+    --ResourceSetEnable("WalkingDead101")
+    
+    --sound
+    --CustomSound_Ambient_Setup("soundCustom_ambient", sceneObj)
+    --local amb_soundFile = "amb_motorInn_day.wav"
+    --CustomSound_Ambient_SetProperties("soundCustom_ambient", amb_soundFile, 5.0, 1.0, sceneObj)
+    --CustomSound_Ambient_Play("soundCustom_ambient", 1.0, sceneObj)
+end
+
+
+
 DrugStoreInterior = function(sceneObj)
     ResourceSetEnable("ProjectSeason1")
     ResourceSetEnable("WalkingDead101")
@@ -851,6 +1770,41 @@ ModifyScene = function(sceneObj)
     local light25 = AgentFindInScene("light_ENV_exterior", sceneObj)
     local light26 = AgentFindInScene("light_ENV_exterior_hotSpecSpotTrainEngine", sceneObj)
     local light27 = AgentFindInScene("light_gobo_trainStation_treesINVERT", sceneObj)
+    
+    
+    
+    local thing1 = AgentFindInScene("light_ENV_exterior_groundFill06", sceneObj)
+    local thing2 = AgentFindInScene("light_NODE_interior", sceneObj)
+    local thing3 = AgentFindInScene("light_ENV_interior_fill01", sceneObj)
+    local thing4 = AgentFindInScene("light_ENV_interior_sunHotspot02", sceneObj)
+    local thing5 = AgentFindInScene("light_ENV_interior_sunHotspot01", sceneObj)
+    local thing6 = AgentFindInScene("light_ENV_interiorOffice_sunHotspot", sceneObj)
+    local thing7 = AgentFindInScene("light_ENV_interior_fill02", sceneObj)
+    local thing8 = AgentFindInScene("light_ENV_interior_fill03", sceneObj)
+    local thing9 = AgentFindInScene("light_ENV_interior_fill04", sceneObj)
+    local thing10 = AgentFindInScene("light_ENV_interiorOfficeFill01", sceneObj)
+    local thing11 = AgentFindInScene("light_ENV_interiorOfficeFill02", sceneObj)
+    local thing12 = AgentFindInScene("light_ENV_interior_fill05", sceneObj)
+    local thing13 = AgentFindInScene("light_gobo_trainStation_officeHole", sceneObj)
+    local thing14 = AgentFindInScene("light_gobo_trainStation_stripe", sceneObj)
+    local thing15 = AgentFindInScene("light_ENV_exterior_waterSpec", sceneObj)
+    destroyMe(thing1)
+    destroyMe(thing2)
+    destroyMe(thing3)
+    destroyMe(thing4)
+    destroyMe(thing5)
+    destroyMe(thing6)
+    destroyMe(thing7)
+    destroyMe(thing8)
+    destroyMe(thing9)
+    destroyMe(thing10)
+    destroyMe(thing11)
+    destroyMe(thing12)
+    destroyMe(thing13)
+    destroyMe(thing14)
+    destroyMe(thing15)
+    
+    
     destroyMe(light3)
     destroyMe(light4)
     destroyMe(light5)
@@ -876,7 +1830,7 @@ ModifyScene = function(sceneObj)
     destroyMe(light25)
     destroyMe(light26)
     destroyMe(light27)
-    
+
     local light28 = AgentFindInScene("light_muscleCarInterior_mirror", sceneObj)
     local light29 = AgentFindInScene("light_muscleCarInterior_speedometer", sceneObj)
     local light30 = AgentFindInScene("light_muscleCarInterior_fuel", sceneObj)
@@ -910,10 +1864,12 @@ ModifyScene = function(sceneObj)
     local light41 = AgentFindInScene("light_ENV_exterior_sunKey", sceneObj)
     local light42 = AgentFindInScene("light_ENV_A_ambFillGrass", sceneObj)
     
+    DevTools_AgentMenuTool_GetValidPropertyNames(light41)
+    
     destroyMe(light39)
-    --destroyMe(light40)
-    --destroyMe(light41)
-   -- destroyMe(light42)
+    destroyMe(light40)
+    destroyMe(light41)
+    destroyMe(light42)
 
     local sunColor     = RGBColor(255, 214, 159, 255)
     local ambientColor = RGBColor(108, 170, 225, 255)
@@ -960,30 +1916,110 @@ ModifyScene = function(sceneObj)
     --customSetProperty(probeModule_props, "1025426863444100460", 25.5) --no clue
     
     --sun
-    ModifyLightSettings(light41, 6.0, 20.0, sunColor)
-    ModifyAgentTransformation_Rotation(light41, Vector(110, 92, 60))
-    local sunProps = AgentGetRuntimeProperties(light41)
-    customSetProperty(sunProps, "1930888535905678774", 3) --sets shadow thingy for reverse lighting
-    customSetProperty(sunProps, "17514946436635221562", 0.1) --sets reverse lighting for sun
-    customSetProperty(sunProps, "17681688128104012802", 0.5) --sets shadow intensity
-    customSetProperty(sunProps, "12886873986940172262", 1.0) --sets specular intensity
+    --ModifyLightSettings(light41, 6.0, 20.0, sunColor)
+    --ModifyAgentTransformation_Rotation(light41, Vector(110, 92, 60))
+    --local sunProps = AgentGetRuntimeProperties(light41)
+    --customSetProperty(sunProps, "1930888535905678774", 3) --sets shadow thingy for reverse lighting
+    --customSetProperty(sunProps, "17514946436635221562", 0.1) --sets reverse lighting for sun
+    --customSetProperty(sunProps, "17681688128104012802", 0.5) --sets shadow intensity
+    --customSetProperty(sunProps, "12886873986940172262", 1.0) --sets specular intensity
     
     --skydome light
     ModifyLightSettings(light34, 4.0, 1.0, skyColor)
     
     --flat ambient
-    ModifyLightSettings(light1, 0.5, 1.0, ambientColor)
+    --ModifyLightSettings(light1, 0.5, 1.0, ambientColor)
     
     --mattes ambient
-    ModifyLightSettings(light40, 2.0, 2.0, sunColor)
+    --ModifyLightSettings(light40, 2.0, 2.0, sunColor)
     
     --grass ambient
-    ModifyLightSettings(light42, 0.75, 1.0, ambientColor)
+    --ModifyLightSettings(light42, 0.75, 1.0, ambientColor)
     
     SetPropertyOnAllCameras(sceneObj, "Field of View Scale", 1.35)
     
     RemovingAllLightingRigs(sceneObj)
     RemoveNPR_OutlineOnAllAgents(sceneObj)
+    
+
+    local light_dir_props = AgentGetRuntimeProperties(light41)
+    local light_amb_props = AgentGetRuntimeProperties(light39)
+    
+    --sun
+    local sunColor = RGBColor(111, 183, 255, 255)
+    sunColor = Desaturate_RGBColor(sunColor, 0.7)
+    customSetPropertyColor(light_dir_props, "4281326393034255142", sunColor)
+    customSetProperty(light_dir_props, "6895516104914333780", 0.4) --light intensity
+    customSetProperty(light_dir_props, "12886873986940172262", 1.0) --specular intensity
+    customSetProperty(light_dir_props, "17514946436635221562", 0.1) --backlighting intensity
+    customSetProperty(light_dir_props, "1733657658237399986", 1) --enable AO for light (1 enable 0 disable)
+    customSetProperty(light_dir_props, "6363179296869353415", 1) --shadow thing set to 1
+    customSetProperty(light_dir_props, "1930888535905678774", 3) -- shadow res 3
+    
+    --ambient
+    local ambientColor     = RGBColor(111, 183, 255, 255)
+    --ambientColor     = Desaturate_RGBColor(ambientColor, 0.45)
+    customSetPropertyColor(light_amb_props, "4281326393034255142", ambientColor)
+    customSetProperty(light_amb_props, "6895516104914333780", 0.125) --light intensity
+    customSetProperty(light_amb_props, "12886873986940172262", 1.0) --specular intensity
+    
+    local skyLight1_props = AgentGetRuntimeProperties(light34)
+    local skyLight2_props = AgentGetRuntimeProperties(light35)
+    local skyLight3_props = AgentGetRuntimeProperties(light36)
+    local skyLight4_props = AgentGetRuntimeProperties(light37)
+    local sky_group_sun = AgentFindInScene("group_sun", sceneObj)
+    
+    local skyColor     = RGBColor(24, 99, 205, 255)
+    skyColor     = Desaturate_RGBColor(skyColor, 0.75)
+    customSetPropertyColor(skyLight1_props, "4281326393034255142", skyColor)
+    customSetProperty(skyLight1_props, "6895516104914333780", 0.8) --light intensity
+    customSetPropertyColor(skyLight4_props, "4281326393034255142", skyColor)
+    customSetProperty(skyLight4_props, "6895516104914333780", 0.5) --light intensity
+    customSetProperty(skyLight3_props, "6895516104914333780", 1.0) --light intensity
+    ModifyAgentTransformation_Rotation(sky_group_sun, Vector(56.196850,-115.275024,-6.413490))
+    
+    
+    --[[
+    --rain
+    ResourceSetEnable("WalkingDead401")
+    local fx_camRain_prop = "fx_camRain.prop"
+    local fx_camRainSplashes_prop = "fx_camRainSplashes.prop"
+    local fx_camRainSplashSpawn_prop = "fx_camRainSplashSpawn.prop"
+
+    local fx_camRain      = AgentCreate("fx_camRain", fx_camRain_prop, newPosition, Vector(0,0,0), sceneObj, false, false)
+    local fx_camRainSplashes      = AgentCreate("fx_camRainSplashes", fx_camRainSplashes_prop, newPosition, Vector(0,0,0), sceneObj, false, false)
+    local fx_camRainSplashSpawn      = AgentCreate("fx_camRainSplashSpawn", fx_camRainSplashSpawn_prop, newPosition, Vector(0,0,0), sceneObj, false, false)
+    
+    -- FX STUFF
+    local fx_rain1 = AgentFindInScene("fx_camRain", sceneObj)
+    local fx_rain2 = AgentFindInScene("fx_camRainSplashes", sceneObj)
+    local fx_rain3 = AgentFindInScene("fx_camRainSplashSpawn", sceneObj)
+
+    local fx_rain1_props = AgentGetRuntimeProperties(fx_rain1)
+    local fx_rain2_props = AgentGetRuntimeProperties(fx_rain2)
+    local fx_rain3_props = AgentGetRuntimeProperties(fx_rain3)
+
+    customSetProperty(fx_rain1_props, "689599953923669477", true) --enable emitter
+    customSetProperty(fx_rain1_props, "4180975590232535326", 0.005) --particle size
+    customSetProperty(fx_rain1_props, "2137029241144994061", 0.8) --particle count
+    customSetProperty(fx_rain1_props, "907461805036530086", 1.0) --particle speed
+    customSetProperty(fx_rain1_props, "459837671211266514", -0.1) --rain random size
+    customSetProperty(fx_rain1_props, "2293817456966484758", 0.0) --rain diffuse intensity
+
+    local fog = AgentFindInScene("module_environment_fog", sceneObj)
+    local fog_props = AgentGetRuntimeProperties(fog)
+    
+    local fogColor = RGBColor(52, 93, 152, 255)
+    fogColor = Desaturate_RGBColor(fogColor, 0.45)
+    fogColor = Multiplier_RGBColor(fogColor, 0.9)
+    customSetPropertyColor(fog_props, "5416356241638078242", fogColor)
+    customSetProperty(fog_props, "16533278351305872715", 1.0) --fog density
+    customSetProperty(fog_props, "15127451441696618964", 13) --fog start
+    customSetProperty(fog_props, "11447774337455102559", 1.0) --height fog fade
+    customSetProperty(fog_props, "3358245545686664500", 300) --max distance
+    customSetProperty(fog_props, "16533278351305872715", 1) --density
+    customSetProperty(fog_props, "15222782018368006447", true) --enable fog
+    ]]--
 end
 
 SwapClemWithFlashbackClem = function(sceneObj)
@@ -1071,6 +2107,48 @@ SwapClemWithFlashbackClem = function(sceneObj)
     
     AgentHide(lee400, true)
 end
+
+SwapClemWithLee = function(sceneObj)
+    ResourceSetEnable("WalkingDead403")
+    local clemAgent = AgentFindInScene("Clementine", sceneObj)
+    local clem400_prop = "sk63_clementineFlashback.prop"
+    local clem400 = AgentCreate("sk63_clementineFlashback", clem400_prop, Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+    
+    local lee400_prop = "sk61_lee.prop"
+    local lee400 = AgentCreate("sk61_lee", lee400_prop, Vector(0,0,0), Vector(0,0,0), sceneObj, false, false)
+
+    local lee400_props        = AgentGetRuntimeProperties(lee400)
+    local clem_props        = AgentGetRuntimeProperties(clemAgent)
+    
+    Custom_AgentSetProperty("Clementine", "D3D Mesh List", PropertyGet(lee400_props, "D3D Mesh List"), sceneObj)
+    Custom_AgentSetProperty("Clementine", "D3D Mesh", PropertyGet(lee400_props, "D3D Mesh"), sceneObj)
+    Custom_AgentSetProperty("Clementine", "Skeleton File", PropertyGet(lee400_props, "Skeleton File"), sceneObj)
+    Custom_AgentSetProperty("Clementine", "Skeleton Body", PropertyGet(lee400_props, "Skeleton Body"), sceneObj)
+    Custom_AgentSetProperty("Clementine", "Skeleton Face", PropertyGet(lee400_props, "Skeleton Face"), sceneObj)
+    Custom_AgentSetProperty("Clementine", "Render Share Skeleton With Agent", PropertyGet(lee400_props, "Render Share Skeleton With Agent"), sceneObj)
+    Custom_AgentSetProperty("Clementine", "Eye Look-At Position", PropertyGet(lee400_props, "Eye Look-At Position"), sceneObj)
+    Custom_AgentSetProperty("Clementine", "Eye Look-At Child Properties", PropertyGet(lee400_props, "Eye Look-At Child Properties"), sceneObj)
+    Custom_AgentSetProperty("Clementine", "Eye Look-At Properties", PropertyGet(lee400_props, "Eye Look-At Properties"), sceneObj)
+    Custom_AgentSetProperty("Clementine", "Look-at Buffer Angle", PropertyGet(lee400_props, "Look-at Buffer Angle"), sceneObj)
+    Custom_AgentSetProperty("Clementine", "Look-at Min Buffer Angle", PropertyGet(lee400_props, "Look-at Min Buffer Angle"), sceneObj)
+    Custom_AgentSetProperty("Clementine", "Style Idle", PropertyGet(lee400_props, "Style Idle"), sceneObj)
+    Custom_AgentSetProperty("Clementine", "Style Guide", PropertyGet(lee400_props, "Style Guide"), sceneObj)
+    Custom_AgentSetProperty("Clementine", "Style Guide2", PropertyGet(lee400_props, "Style Guide2"), sceneObj)
+    Custom_AgentSetProperty("Clementine", "Style Idle2", PropertyGet(lee400_props, "Style Idle2"), sceneObj)
+    Custom_AgentSetProperty("Clementine", "Look - Chore Head", PropertyGet(lee400_props, "Look - Chore Head"), sceneObj)
+    Custom_AgentSetProperty("Clementine", "Look - Chore Eyes", PropertyGet(lee400_props, "Look - Chore Eyes"), sceneObj)
+    Custom_AgentSetProperty("Clementine", "Look - Contribution Fade Speed", PropertyGet(lee400_props, "Look - Contribution Fade Speed"), sceneObj)
+    Custom_AgentSetProperty("Clementine", "Look - FOV Degrees", PropertyGet(lee400_props, "Look - FOV Degrees"), sceneObj)
+    Custom_AgentSetProperty("Clementine", "Eye Look-At Properties", PropertyGet(lee400_props, "Eye Look-At Properties"), sceneObj)
+    Custom_AgentSetProperty("Clementine", "Eye Look-At Properties", PropertyGet(lee400_props, "Eye Look-At Properties"), sceneObj)
+    Custom_AgentSetProperty("Clementine", "Look-at Buffer Angle", PropertyGet(lee400_props, "Look-at Buffer Angle"), sceneObj)
+    Custom_AgentSetProperty("Clementine", "Look-at Min Buffer Angle", PropertyGet(lee400_props, "Look-at Min Buffer Angle"), sceneObj)
+    
+    --Custom_AgentSetProperty("Clementine", "Render Global Scale", 1.05, sceneObj)
+    
+    AgentHide(lee400, true)
+end
+
 
 
 local OnLogicReady = function()
@@ -1907,7 +2985,12 @@ TrainStation = function()
   
     ModifyScene(kScene)
     CleanUpExistingTrainScene(kScene)
-    DrugStoreInterior(kScene)
+    --DrugStoreInterior(kScene)
+    --MotorInnEnv(kScene)
+    --SwapClemWithLee(kScene)
+    --VirginiaUnderpass(kScene)
+    --BoardingSchool(kScene)
+    LodgeExteriorRear(kScene)
     
     --PrintSceneListToTXT(kScene, "sceneobject_401-trainstation.txt")
     
@@ -1920,25 +3003,27 @@ TrainStation = function()
     --LoadEpilougeTrain(kScene)
     
     
-    local leeChoreTest_prop = "sk61_lee.prop"
-    local leeChoreTest = AgentCreate("sk61_lee_test", leeChoreTest_prop, Vector(7.5,0,0), Vector(0,90,0), kScene, false, false)
-    local leeChoreTest_props        = AgentGetRuntimeProperties(leeChoreTest)
     
-    Custom_AgentSetProperty("Clementine", "D3D Mesh List", 0, kScene)
+    
+    --local leeChoreTest_prop = "sk61_lee.prop"
+    --local leeChoreTest = AgentCreate("sk61_lee_test", leeChoreTest_prop, Vector(7.5,0,0), Vector(0,90,0), kScene, false, false)
+    --local leeChoreTest_props        = AgentGetRuntimeProperties(leeChoreTest)
+    
+    --Custom_AgentSetProperty("Clementine", "D3D Mesh List", 0, kScene)
     
     --leeChoreTest.controller = ChorePlay("")
-    leeChoreTest.controller = PlayAnimationLooping("sk63_action_ajDoesWinningJig.anm")
-    leeChoreTest.controller = PlayAnimationLooping("sk63_action_ajDoesWinningJig.anm", true)
-    local agent_controller = leeChoreTest.controller
+    --leeChoreTest.controller = PlayAnimationLooping("sk63_action_ajDoesWinningJig.anm")
+    --leeChoreTest.controller = PlayAnimationLooping("sk63_action_ajDoesWinningJig.anm", true)
+    --local agent_controller = leeChoreTest.controller
 
-    ControllerSetScene(agent_controller, kScene)
-    ControllerSetTimeScale(agent_controller, SceneGetTimeScale(kScene))
-    ControllerDisableTimeSync(agent_controller, false)
-    ControllerSetTime(agent_controller, 0.0)
-    ControllerDrift(agent_controller, true)
-    ControllerSetName(agent_controller, AgentGetName(agent))
-    ControllerDisableTimeSync(agent_controller, true)
-    ControllerSetLooping(agent_controller, true)
+    --ControllerSetScene(agent_controller, kScene)
+    --ControllerSetTimeScale(agent_controller, SceneGetTimeScale(kScene))
+    --ControllerDisableTimeSync(agent_controller, false)
+    --ControllerSetTime(agent_controller, 0.0)
+    --ControllerDrift(agent_controller, true)
+    --ControllerSetName(agent_controller, AgentGetName(agent))
+    --ControllerDisableTimeSync(agent_controller, true)
+    --ControllerSetLooping(agent_controller, true)
     
     
     

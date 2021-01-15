@@ -3,9 +3,9 @@ local vectorButtons        = { "X", "Y", "Z", "Print Property" }
 local colorButtons         = { "R", "G", "B", "A", "Print Property" }
 local booleanButtons       = { "True Or False", "Print Property" }
 local numberButtons        = { "Increase Or Decrease (0.1)", "Increase Or Decrease (0.5)", "Increase Or Decrease (1)", "Increase Or Decrease (5)", "Print Property" }
-local devtoolsButtons      = { "Zero Transformations", "Modify Position", "Modify Rotation", "Modify World Position", "Modify World Rotation", "Modify Property", "Print Scene To File", "Disable Walkboxes", "Toggle Scene Time Scale", "Find Agent", "Delete Agent", "Duplicate Agent", "Toggle Legend", "Print Agent Transformations", "Toggle Graphic Black", "Toggle Combat Mode", "Print Valid Prop Names", "Modify Known Properties", "Change Property"}
+local devtoolsButtons      = { "Zero Transformations", "Modify Position", "Modify Rotation", "Modify World Position", "Modify World Rotation", "Modify Property", "Print Scene To File", "Disable Walkboxes", "Toggle Scene Time Scale", "Find Agent", "Delete Agent", "Duplicate Agent", "Toggle Legend", "Print Agent Transformations", "Toggle Graphic Black", "Toggle Combat Mode", "Print Valid Prop Names", "Modify Known Properties", "Change Property", "Game UI Push Mode Toggle"}
 
-local maxIndex              = 20
+local maxIndex              = 21
 local minIndex              = 0
 local devtoolsMenuIndex     = 1
 local isDevtoolsMenuEnabled = false
@@ -24,7 +24,7 @@ local modifyKnownPropertyMode = false
 
 local sceneTimeToggle = false
 
-local IS_MENU_SCENE = false
+local IS_MENU_SCENE = true
 
 local modifyPositionMenu_enabled      = false
 local modifyRotationMenu_enabled      = false
@@ -147,7 +147,7 @@ Devtools_UI_InitalizeMenuText = function()
             mainmenu_text = mainmenu_text .. curr_agent_pos_world_string .. "\n"
             mainmenu_text = mainmenu_text .. curr_agent_rot_world_string .. "\n"
             
-            maxIndex = 20
+            maxIndex = 21
             for i, mainmenu_button in ipairs(devtoolsButtons) do
                 if i == devtoolsMenuIndex then
                     --Selected
@@ -776,6 +776,23 @@ Devtools_SelectOption = function(option)
         modifyWorldRotationMenu_enabled = false
         modifyPropertyMenu_enabled      = false
         Devtools_ChangeProperty()
+    elseif option == 20 then
+        --Toggle Combat Mode
+        modifyPositionMenu_enabled      = false
+        modifyRotationMenu_enabled      = false
+        modifyWorldPositionMenu_enabled = false
+        modifyWorldRotationMenu_enabled = false
+        modifyPropertyMenu_enabled      = false
+        Devtools_ToggleUIPushMode()
+        --DialogBox_YesNo("Test")
+    end
+end
+
+Devtools_ToggleUIPushMode = function()
+    if IS_MENU_SCENE then
+        WidgetInputHandler_EnableInput(false)
+    else
+        Game_PushMode(eModeDialogBox)
     end
 end
 
